@@ -1,0 +1,289 @@
+html {
+	scroll-behavior: smooth;
+}
+
+body{
+	background-color: Black;
+    color: white;
+}
+
+.subir {
+	background-color: GreenYellow;
+	border-radius: 6px;
+}
+
+k.subir:hover {
+	background-color: Lime;
+	border-radius: 6px;
+}
+
+.inicio:hover {
+	background-color: Gainsboro;
+	border-radius: 6px;
+}
+
+/***** Navbar *****/
+
+.navbar-nav{
+	margin-left: 60px;
+}
+
+.navbar-dark .navbar-nav { 
+	font-size: 15px; 
+}
+
+.navbar-dark .navbar-nav .nav-link { 
+	color: #fff; 
+	color: rgba(255, 255, 255, 0.8); 
+}
+
+.navbar-dark .navbar-nav .nav-link:hover { 
+	color: #fff; 
+}
+
+.navbar-dark .navbar-nav .nav-link:focus { 
+	color: #fff; 
+	outline: 0; 
+}
+
+.navbar-expand-md .navbar-nav .nav-link { 
+	padding-left: 1rem; 
+	padding-right: 1rem; 
+}
+
+.navbar-text{
+	margin-right: 120px;
+}
+
+.navbar-dark .navbar-text a { 
+	margin: 0 8px; 
+	font-size: 26px; 
+	color: #fff; 
+	color: rgba(255, 255, 255, 0.8); 
+}
+
+.navbar-dark .navbar-text a:hover, 
+.navbar-dark .navbar-text a:focus { 
+	color: #fff; 
+}
+
+/***** Home *****/
+
+#home {
+  position: relative;    /* para poder posicionar el texto de forma absoluta */
+  display: inline-block; /* para que solo ocupe el ancho de la imagen */
+}
+
+.thumbnail {
+    position: relative;
+    display: inline-block;
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate( -50%, -50% );
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.portada {
+	width: 100%;
+	height: 300px;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+
+/***** Bio *****/
+
+#bio {
+	padding-top: 40px;
+	text-align: center;
+}
+
+.bio-img {
+	margin-top: 30px;
+	margin-bottom: 70px;
+}
+
+.bio-text {
+	margin-top: 40px;
+	padding-left: 30px;
+	overflow: hidden;
+	text-align: left;
+	font-size: 120%;
+}
+
+/***** Portfolio *****/
+
+#portfolio {
+	padding-top: 40px;
+	text-align: center;
+}
+
+.card {
+	padding: 40px;
+	text-align: left;
+}
+
+.card-img-top {
+	width: 80%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.card-body {
+	padding: 10px 20px 10px 60px;
+}
+
+.card-title {
+	padding: 10px 10px 10px 0;
+}
+
+.card-device {
+	font-size: 14px;
+	color: #ddd;
+}
+
+.card-device i {
+	padding-right: 5px;
+}
+
+.card-text {
+	padding-top: 10px;
+}
+
+/***** Footer *****/
+
+footer {
+	padding: 40px 0 0 0;
+}
+
+.footer-contact {
+	padding-top: 20px;
+}
+
+.footer-left {
+	padding-left: 100px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"] {
+	height: 50px;
+    margin: 0px 0px 20px 0px;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #666;
+    border: 6px solid #666;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #ddd;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+.contact-form input[type="text"].input-error,
+.contact-form input[type="email"].input-error,
+.contact-form textarea.input-error, 
+.contact-form textarea.form-control.input-error {
+    border: 6px solid #ff8a38;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus, 
+.contact-form textarea.form-control:focus  {
+	outline: 0;
+	background: #666;
+    border: 6px solid #888;
+}
+
+.contact-form input[type="text"]::-moz-placeholder,
+.contact-form input[type="email"]::-moz-placeholder,
+.contact-form textarea::-moz-placeholder, 
+.contact-form textarea.form-control::-moz-placeholder  { color: #ddd; }
+
+.contact-form input[type="text"]:-ms-input-placeholder,
+.contact-form input[type="email"]:-ms-input-placeholder,
+.contact-form textarea:-ms-input-placeholder, 
+.contact-form textarea.form-control:-ms-input-placeholder { color: #ddd; }
+
+.contact-form input[type="text"]::-webkit-input-placeholder,
+.contact-form input[type="email"]::-webkit-input-placeholder,
+.contact-form textarea::-webkit-input-placeholder, 
+.contact-form textarea.form-control::-webkit-input-placeholder { color: #ddd; }
+
+.contact-form textarea, 
+.contact-form textarea.form-control {
+    margin: 20;
+    padding: 0 20px;
+    vertical-align: middle;
+    background: #666;
+    border: 6px solid #666;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 50px;
+    color: #ddd;
+    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
+}
+
+.contact-form button.btn {
+    margin-top: 20px;
+}
+
+.footer-social {
+	padding-top: 20px;
+}
+
+.footer-social a {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	margin-right: 6px;
+	margin-bottom: 10px;
+	padding-top: 7px;
+	background: #000;
+	-moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;
+    font-size: 32px;
+	color: #fff; 
+	color: rgba(255, 255, 255, 0.8); 
+    line-height: 40px;
+    text-align: center;
+}
+.footer-social a:hover, .footer-social a:focus { background: #2C2C2C; color: #fff; }
+
+.footer-social a i { vertical-align: middle; }
+
+.footer-copyright {
+	margin-top: 25px;
+	padding-top: 25px;
+	border-top: 1px ridge #777;
+}
+
+.footer-bottom {
+	margin: 60px 0 0 0;
+	padding-top: 15px;
+	text-align: center;
+    color: #666;
+}
+
+.footer-bottom a {
+	font-size: 32px;
+	color: #fff; 
+	color: rgba(255, 255, 255, 0.8); 
+    line-height: 30px;
+	background: #000;
+}
+
+.footer-bottom a:hover, .footer-bottom a:focus { 
+    color: #fff;
+	background: #2C2C2C;
+}
