@@ -3,18 +3,8 @@ html {
 }
 
 body{
-	background-color: Black;
-    color: white;
-}
-
-.subir {
-	background-color: GreenYellow;
-	border-radius: 6px;
-}
-
-k.subir:hover {
-	background-color: Lime;
-	border-radius: 6px;
+	background-color: #111111;
+    color: white;//#0D0E0E #181A1B #111111
 }
 
 .inicio:hover {
@@ -22,10 +12,78 @@ k.subir:hover {
 	border-radius: 6px;
 }
 
+/***** Game *****/
+
+#instructions {
+    margin-top: 50px;   
+    color: white;
+	text-align: center;
+}
+
+#ins {
+	vertical-align: middle; 
+	display: inline-block;
+}
+
+#score {
+	vertical-align: middle; 
+	display: inline-block;
+}
+
+#game-over {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: none;
+}
+
+#game-over {
+    height: 200px;
+    text-align: center;
+    color: white;
+}
+
+#game-over h1 {
+    font-size: 3em;
+    font-family: sans-serif;
+}
+
+#game-over button {
+    font-size: 1.5em;
+}
+
+#game-over a{
+	vertical-align: middle; 
+	display: inline-block;
+	text-align: center;
+	width: 80px;
+	height: 40px;
+	font-size: 14px;
+	color: #fff; 
+	color: rgba(255, 255, 255, 0.8); 
+    line-height: 30px;    
+	text-decoration:none;
+}
+#game-over a:hover, #game-over a:focus { color: #fff; }
+	
+#play-again {
+	vertical-align: middle; 
+	display: inline-block;
+}
+
 /***** Navbar *****/
 
 .navbar-nav{
 	margin-left: 60px;
+}
+
+.navbar.scrolled {
+  background-color: #000 !important;
+  transition: background-color 200ms linear;
 }
 
 .navbar-dark .navbar-nav { 
@@ -105,28 +163,50 @@ k.subir:hover {
 }
 
 .bio-img {
-	margin-top: 30px;
-	margin-bottom: 70px;
+	margin-top: 0px;
+	margin-bottom: 0px;
 }
 
-.bio-text {
-	margin-top: 40px;
+#foto{
+	max-width: 80%;
+	max-height: 80%;
+}
+
+.bio-textRight {
 	padding-left: 30px;
 	overflow: hidden;
 	text-align: left;
 	font-size: 120%;
 }
 
+.bio-textLeft {
+	padding-right: 60px;
+	padding-left: 240px;
+	overflow: hidden;
+	text-align: right;
+	font-size: 120%;
+}
+
+#bio a {
+	color: #fff; 
+	color: rgba(255, 255, 255, 0.8); 
+    line-height: 30px;    
+	text-decoration:none;
+}
+#bio a:hover, #bio a:focus { color: #fff; }
+
 /***** Portfolio *****/
 
 #portfolio {
-	padding-top: 40px;
+	margin-top: -40px;
+	padding-top: 50px;
 	text-align: center;
 }
 
 .card {
 	padding: 40px;
 	text-align: left;
+	border-style: none;
 }
 
 .card-img-top {
@@ -160,107 +240,34 @@ k.subir:hover {
 /***** Footer *****/
 
 footer {
-	padding: 40px 0 0 0;
-}
-
-.footer-contact {
-	padding-top: 20px;
-}
-
-.footer-left {
-	padding-left: 100px;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"] {
-	height: 50px;
-    margin: 0px 0px 20px 0px;
-    padding: 0 20px;
-    vertical-align: middle;
-    background: #666;
-    border: 6px solid #666;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 50px;
-    color: #ddd;
-    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
-    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
-}
-
-.contact-form input[type="text"].input-error,
-.contact-form input[type="email"].input-error,
-.contact-form textarea.input-error, 
-.contact-form textarea.form-control.input-error {
-    border: 6px solid #ff8a38;
-}
-
-.contact-form input[type="text"]:focus,
-.contact-form input[type="email"]:focus,
-.contact-form textarea:focus, 
-.contact-form textarea.form-control:focus  {
-	outline: 0;
-	background: #666;
-    border: 6px solid #888;
-}
-
-.contact-form input[type="text"]::-moz-placeholder,
-.contact-form input[type="email"]::-moz-placeholder,
-.contact-form textarea::-moz-placeholder, 
-.contact-form textarea.form-control::-moz-placeholder  { color: #ddd; }
-
-.contact-form input[type="text"]:-ms-input-placeholder,
-.contact-form input[type="email"]:-ms-input-placeholder,
-.contact-form textarea:-ms-input-placeholder, 
-.contact-form textarea.form-control:-ms-input-placeholder { color: #ddd; }
-
-.contact-form input[type="text"]::-webkit-input-placeholder,
-.contact-form input[type="email"]::-webkit-input-placeholder,
-.contact-form textarea::-webkit-input-placeholder, 
-.contact-form textarea.form-control::-webkit-input-placeholder { color: #ddd; }
-
-.contact-form textarea, 
-.contact-form textarea.form-control {
-    margin: 20;
-    padding: 0 20px;
-    vertical-align: middle;
-    background: #666;
-    border: 6px solid #666;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    line-height: 50px;
-    color: #ddd;
-    -moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
-    -o-transition: all .3s; -moz-transition: all .3s; -webkit-transition: all .3s; -ms-transition: all .3s; transition: all .3s;
-}
-
-.contact-form button.btn {
-    margin-top: 20px;
+	padding: 20px 0 0 0;
+	text-align: center;
 }
 
 .footer-social {
-	padding-top: 20px;
+	padding: 20px 0 20px 0;
 }
 
 .footer-social a {
+	vertical-align: middle; 
 	display: inline-block;
-	width: 60px;
-	height: 60px;
-	margin-right: 6px;
-	margin-bottom: 10px;
-	padding-top: 7px;
-	background: #000;
-	-moz-border-radius: 50%; -webkit-border-radius: 50%; border-radius: 50%;
-    font-size: 32px;
+	text-align: center;
+	width: 80px;
+	height: 40px;
+	font-size: 14px;
 	color: #fff; 
 	color: rgba(255, 255, 255, 0.8); 
-    line-height: 40px;
-    text-align: center;
+    line-height: 30px;    
+	text-decoration:none;
 }
-.footer-social a:hover, .footer-social a:focus { background: #2C2C2C; color: #fff; }
+.footer-social a:hover, .footer-social a:focus { color: #fff; }
 
-.footer-social a i { vertical-align: middle; }
+.footer-social a i { 
+	vertical-align: middle; 
+	text-align: center;
+	margin-left: 15px;
+	margin-right: 15px;
+}
 
 .footer-copyright {
 	margin-top: 25px;
@@ -268,8 +275,18 @@ footer {
 	border-top: 1px ridge #777;
 }
 
+.footer-copyright a {
+	font-size: 14px;
+	color: #fff; 
+	color: rgba(255, 255, 255, 0.8); 
+    line-height: 30px;    
+	text-decoration:none;
+}
+
+.footer-copyright a:hover, .footer-social a:focus { color: #fff; }
+
 .footer-bottom {
-	margin: 60px 0 0 0;
+	margin: 20px 0 0 0;
 	padding-top: 15px;
 	text-align: center;
     color: #666;
@@ -287,3 +304,4 @@ footer {
     color: #fff;
 	background: #2C2C2C;
 }
+
