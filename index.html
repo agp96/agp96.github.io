@@ -16,7 +16,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel="stylesheet" type="text/css" href="css/media-queries.css">
 		
-        <link rel="shortcut icon" href="img/favicon.png">
+        <link rel="shortcut icon" href="img/favicon/favicon.png">
 		
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
@@ -24,8 +24,34 @@
 
     </head>
   
-    <body class="bg-dark">
-  
+	<body>
+      <div id="instructions">							
+		<div class="col-3 col-md-2 col-lg-2" id="ins">
+        ASCENDER: W </div>
+		<div class="col-3 col-md-2 col-lg-2" id="ins">
+        DESCENDER: S </div>
+		<div class="col-3 col-md-2 col-lg-2" id="ins">
+        DISPARAR: K </div>
+		<div class="col-2 col-md-3 col-lg-4" id="score"></div>
+      </div>
+		<canvas id="canvas"></canvas>
+		
+    <div id="game-over-overlay"></div>
+
+    <div id="game-over">
+      <h1>GAME OVER</h1>
+      <button id="play-again" type="button" class="btn btn-primary">Juega de nuevo</button>	
+      <h2>Comparte tu resultado</h2>						
+	  <a id="scoreX" href="" target="_blank">Twitter</a>
+	  <a id="scoreW" href="" target="_blank">Whatsapp</a>
+	  <a id="scoreT" href="" target="_blank">Telegram</a>
+	</div>
+	
+    <script type="text/javascript" src="js/resources.js"></script>
+    <script type="text/javascript" src="js/input.js"></script>
+    <script type="text/javascript" src="js/sprite.js"></script>
+	<script src="js/game.js"></script>
+	
 		<!-- Nav -->
 		<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
 			<div class="container-fluid">
@@ -35,33 +61,33 @@
 				<div class="navbar-collapse collapse" id="navbarNav">
 					<ul class="navbar-nav me-auto mb-sm-0 mb-md-0 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link scroll-link" href="#home">HOME</a>
+							<a alt="Home" class="nav-link scroll-link" href="#home">HOME</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link scroll-link" href="#bio">BIO</a>
+							<a alt="Bio" class="nav-link scroll-link" href="#bio">BIO</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link scroll-link" href="#portfolio">PORTFOLIO</a>
+							<a alt="Portfolio" class="nav-link scroll-link" href="#portfolio">PORTFOLIO</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link scroll-link" href="#contacto">CONTACTO</a>
+							<a alt="Cobtacto" class="nav-link scroll-link" href="#contacto">CONTACTO</a>
 						</li>
 					</ul>
-					<div class="navbar-text d-flex">
-						<a href="https://www.instagram.com/agordoprieto/"><i class="fab fa-instagram"></i></a>
-						<a href="https://twitter.com/agordoprieto"><i class="fab fa-twitter"></i></a>
-						<a href="https://t.me/adriangordo"><i class="fab fa-telegram"></i></a>
-						<a href="https://www.linkedin.com/in/adri%C3%A1ngordoprieto/"><i class="fab fa-linkedin"></i></a>
-						<a href="https://www.youtube.com/channel/UCIdE3oR1phv0dACMffkc-yw"><i class="fab fa-youtube"></i></a>
-					</div>
+					<!--<div class="navbar-text d-flex">
+							<a alt="Sigueme en Instagram" href="https://www.instagram.com/agordoprieto/" target="_blank"><i class="fab fa-instagram"></i></a>
+							<a alt="Sigueme en Twitter" href="https://twitter.com/agordoprieto" target="_blank"><i class="fab fa-twitter"></i></a>
+							<a alt="Sigueme en Telegram" href="https://t.me/adriangordo"target="_blank"><i class="fab fa-telegram"></i></a>
+							<a alt="Sigueme en Linkedin" href="https://www.linkedin.com/in/adri%C3%A1ngordoprieto/" target="_blank"><i class="fab fa-linkedin"></i></a>
+							<a alt="Sigueme en Youtube" href="https://www.youtube.com/channel/UCIdE3oR1phv0dACMffkc-yw" target="_blank"><i class="fab fa-youtube"></i></a>
+						</div>-->
 				</div>
 			</div>
 		</nav>
 		
-		<!-- Top -->
+		<!-- Top 
 		<div id="home">
 			<div class="thumbnail">
-				<img class="portada" src="img/portada.jpg" alt="">
+				<img class="portada" src="img/portada/portada.jpg" alt="">
 				<div class="caption">
 					<h3>Desarrollador de videojuegos
 					</h3>
@@ -72,17 +98,47 @@
 				</div>
 			</div>
 		</div>
-		
+		-->
 		<!-- Bio -->
 		<div id="bio">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-6 col-lg-4 offset-lg-2 bio-img">
-						<img src="img/foto_perfil.png" alt="">
+						<img id="foto" src="img/bio/foto_perfil.png" alt="Foto de Adrián Gordo">
 					</div>
-					<div class="col-12 col-md-6 col-lg-4 bio-text">
+					<div class="col-12 col-md-6 col-lg-4 bio-textRight">
 						<p>Me llamo Adrián Gordo, soy Ingeniero Multimedia y me dedico a la programación y al diseño.</p>
 						<p>¿Qué es lo que más me motiva? Hacer casi cualquier cosa que aparezca en una pantalla, una web, una aplicación, un videojuego. Todo lo que sea interactivo y pueda darle a los botones.
+						</p>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-6 col-lg-6 order-sm-2 order-md-1 bio-textLeft">
+						<!--<p>Estudié el Grado de Ingeniería Multimedia, hasta entonces desconocía lo que era "Hello World" pero año tras año fui aprendiendo lenguajes como Java y C.</p>
+						<p>No me quedé ahí, en el Trabajo Fin de Grado me interesé por la Inteligencia Artificial, y mediante Python realicé una herramienta para el estudio de las emociones en los videojuegos.
+						</p>-->
+						<p>Estudié el Grado de Ingeniería Multimedia, hasta entonces desconocía lo que era "Hello World" pero año tras año fui aprendiendo lenguajes como Java y C.</p>
+						<p>No me quedé ahí, en el Trabajo Fin de Grado me interesé por la Inteligencia Artificial, y mediante Python realicé una herramienta para el estudio de las emociones en los videojuegos.
+						</p>
+					</div>
+					<div class="col-12 col-md-6 col-lg-4 order-sm-1 order-md-2 bio-img">
+						<img id="foto" src="img/bio/foto_perfil2.png" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-12 col-md-6 col-lg-4 offset-lg-2 bio-img">
+						<img id="foto" src="img/bio/foto_perfil3.png" alt="Foto de Adrián Gordo">
+					</div>
+					<div class="col-12 col-md-6 col-lg-4 bio-textRight">
+						<!--<p>Tras acabar el Grado, cursé el Máster en Desarrollo de Software para Dispositivos Móviles, para especializarme tanto en Android, iOS como multiplataforma.</p>
+						<p>Para el Trabajo Fin de Máster, experimenté con el reconocimiento de voz y desarrollé un videojuego móvil que permitía ser jugado sin tocar la pantalla.
+						</p>-->
+						<p>Tras acabar el Grado, cursé el Máster en Desarrollo de Software para Dispositivos Móviles, dónde experimenté con el reconocimiento de voz en un videojuego móvil como Trabajo Fin de Máster.</p>
+						<p>Poco después, me interesó el ámbito de la Ciberseguridad, presentándome a la <a alt="National CyberLeague" href="https://www.nationalcyberleague.es/" >National CyberLeague</a> y llegando a la final con mis compañeros de equipo.
 						</p>
 					</div>
 				</div>
@@ -95,15 +151,14 @@
 			<div class="row">
 				<div class="col">
 					<h2>Portfolio</h2>
-				</div>
-			</div>
+				</div>			
 				<div class="row row-cols-1 row-cols-md-2 g-4">
 					<div class="col">
-						<div class="card bg-dark">
-							<img src="img/Screenshot_CyberAdvanced.png" class="card-img-top" alt="CyberAdvanced">
+						<div>
+							<img src="img/portfolio/Screenshot_CyberAdvanced.png" class="card-img-top" alt="CyberAdvanced">
 							<div class="card-body">
 								<h5 class="card-title">
-								<img src="img/logoCyberAdvanced.png" alt="CyberAdvanced"> CyberAdvanced</h5>
+								<img src="img/portfolio/logoCyberAdvanced.png" alt="CyberAdvanced logo"> CyberAdvanced</h5>
 							<div class="card-device">
 								<i class="fab fa-android fa-2x"></i><i class="fab fa-apple fa-2x"></i>
 							</div>
@@ -113,11 +168,11 @@
 						</div>
 					</div>
 					<div class="col">
-						<div class="card bg-dark">
-							<img src="img/Screenshot_RecklessJay.png" class="card-img-top" alt="RecklessJay">
+						<div>
+							<img src="img/portfolio/Screenshot_RecklessJay.png" class="card-img-top" alt="RecklessJay">
 							<div class="card-body">
 								<h5 class="card-title">
-								<img src="img/logoRecklessJay.png" alt="RecklessJay"> RecklessJay</h5>
+								<img src="img/portfolio/logoRecklessJay.png" alt="RecklessJay logo"> RecklessJay</h5>
 							<div class="card-device"><i class="fab fa-android fa-2x"></i><i class="fab fa-apple fa-2x"></i>
 							</div>
 								<p class="card-text">Ayuda a Jay 
@@ -126,10 +181,10 @@
 						</div>
 					</div>
 					<div class="col">
-						<div class="card bg-dark">
-							<img src="img/Screenshot_FastLap.png" class="card-img-top" alt="FastLap">
+						<div>
+							<img src="img/portfolio/Screenshot_FastLap.png" class="card-img-top" alt="FastLap">
 							<div class="card-body">
-								<h5 class="card-title"><img src="img/logoFastLap.png" alt="FastLap"> Fast Lap</h5>
+								<h5 class="card-title"><img src="img/portfolio/logoFastLap.png" alt="FastLap logo"> Fast Lap</h5>
 							<div class="card-device">
 							<i class="fas fa-desktop fa-2x"></i>
 							</div>
@@ -139,10 +194,10 @@
 						</div>
 					</div>
 					<div class="col">
-						<div class="card bg-dark">
-							<img src="img/Screenshot_TwoFingerDeathNow.png" class="card-img-top" alt="TwoFingerDeathNow">
+						<div>
+							<img src="img/portfolio/Screenshot_TwoFingerDeathNow.png" class="card-img-top" alt="TwoFingerDeathNow">
 							<div class="card-body">
-								<h5 class="card-title"><img src="img/logoTwoFingerDeathNow.png" alt="TwoFingerDeathNow"> Two Finger Death Now</h5>
+								<h5 class="card-title"><img src="img/portfolio/logoTwoFingerDeathNow.png" alt="TwoFingerDeathNow logo"> Two Finger Death Now</h5>
 								
 							<div class="card-device">
 							<i class="fas fa-desktop fa-2x"></i>
@@ -160,29 +215,18 @@
 		<footer id="contacto">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-6 footer-left bg-dark">
+					<div class="col-md-12 footer">
 						<h3>Contacto</h3>
-                    	<div class="contact-form">
-							<form>
-								<div class="footer-contact">
-									<input type="email" class="form-control" placeholder="Email">
-									<input type="text" class="form-control" placeholder="Asunto">
-									<textarea class="form-control" id="text-area" rows="3" placeholder="Mensaje"></textarea>
-								</div>
-								<button type="submit" class="btn btn-primary">Enviar</button>
-							</form>
-						</div>
-					</div>
-					<div class="col-md-5 offset-md-1 footer-right">
-						<h3>Sígueme en Redes</h3>
-						<div class="footer-social">	                    	
-							<a href="https://www.instagram.com/agordoprieto/"><i class="fab fa-instagram"></i></a>
-							<a href="https://twitter.com/agordoprieto"><i class="fab fa-twitter"></i></a>
-							<a href="https://t.me/adriangordo"><i class="fab fa-telegram"></i></a>
-							<a href="https://www.linkedin.com/in/adri%C3%A1ngordoprieto/"><i class="fab fa-linkedin"></i></a>
-							<a href="https://www.youtube.com/channel/UCIdE3oR1phv0dACMffkc-yw"><i class="fab fa-youtube"></i></a>
+						<div class="footer-social">	                  	
+							<a alt="Email us" href="mailto:agpalmoradi@gmail.com">  Email <i class="far fa-envelope"></i></a>
+							<a alt="Sigueme en Instagram" href="https://www.instagram.com/agordoprieto/" target="_blank"> Instagram <i class="fab fa-instagram"></i></a>
+							<a alt="Sigueme en Twitter" href="https://twitter.com/agordoprieto" target="_blank"> Twitter <i class="fab fa-twitter"></i></a>
+							<a alt="Sigueme en Telegram" href="https://t.me/adriangordo" target="_blank"> Telegram <i class="fab fa-telegram"></i></a>
+							<a alt="Sigueme en Linkedin" href="https://www.linkedin.com/in/adri%C3%A1ngordoprieto/" target="_blank"> LinkedIn <i class="fab fa-linkedin"></i></a>
+							<a alt="Sigueme en Youtube" href="https://www.youtube.com/channel/UCIdE3oR1phv0dACMffkc-yw" target="_blank"> Youtube <i class="fab fa-youtube"></i></a>
 						</div>
 						<div class="footer-copyright">
+							<a alt="Política de Cookies" href="#bio">Cookies</a>
 							<p><i class="fab fa-creative-commons"></i> Adrián Gordo Prieto</p>
 						</div>
 					</div>
@@ -190,7 +234,7 @@
 			</div>
 			
 			<div class="footer-bottom d-grid">
-				<a href="#home" class="btn btn-lg" role="button"><i class="fas fa-chevron-up"></i></a>
+				<a alt="Sube al principio de la página" href="#home" class="btn btn-lg" role="button"><i class="fas fa-chevron-up"></i></a>
 			</div>
 			
 		</footer>
@@ -201,7 +245,7 @@
 	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
 	    <script src="js/scripts.js"></script>
-		
+
 	</body>
 	
 </html>

@@ -1,1 +1,1 @@
-# Web Sandro
+Web realizada mediante Bootstrap.
