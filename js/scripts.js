@@ -15,7 +15,7 @@ $(function () {
 	  window.addEventListener('resize', resizeCanvas, false);
 
   function resizeCanvas() {
-    canvas.width = window.innerWidth-20;
+    canvas.width = window.innerWidth-50;
     canvas.height = window.innerHeight/2;
 
     // Redraw everything after resizing the window
