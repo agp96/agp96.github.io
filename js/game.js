@@ -19,7 +19,6 @@ canvas.width = window.innerWidth-20;
 canvas.height = window.innerHeight/2;
 document.body.appendChild(canvas);
 
-
 var gameOverId = document.getElementById("game-over-overlay");
 gameOverId.width = canvas.width;
 gameOverId.height = canvas.height;
