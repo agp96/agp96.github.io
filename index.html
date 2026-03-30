@@ -1,114 +1,132 @@
 <!doctype html>
 <html lang="es">
 
-    <head>
-  
-		<title>Adrián Gordo</title>
-		
-		<!-- Required meta tags -->
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+	<title>Adrián Gordo Prieto | Dev de Videojuegos, Web y Apps</title>
+	<meta name="description"
+		content="Explora el portfolio de Adrián Gordo Prieto: desarrollador de videojuegos, web y apps móviles.">
 
-		<!-- Bootstrap CSS -->
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
-		
-		<!-- Custom CSS -->
-		<link rel="stylesheet" type="text/css" href="css/style.css">
-		<link rel="stylesheet" type="text/css" href="css/media-queries.css">
-		
-        <link rel="shortcut icon" href="img/favicon/favicon.png">
-		
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://agp96.github.io">
+	<meta property="og:title" content="Adrián Gordo Prieto | Portfolio Developer">
+	<meta property="og:description"
+		content="Explora el portfolio de Adrián Gordo Prieto: desarrollador de videojuegos, web y apps móviles.">
+	<meta property="og:image" content="https://agp96.github.io/img/bio/foto_perfil.png">
 
-    </head>
-  
-	<body>
-      <div id="instructions">							
-		<div class="col-3 col-md-2 col-lg-2" id="ins">
-        ASCENDER: W </div>
-		<div class="col-3 col-md-2 col-lg-2" id="ins">
-        DESCENDER: S </div>
-		<div class="col-3 col-md-2 col-lg-2" id="ins">
-        DISPARAR: K </div>
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Adrián Gordo Prieto | Portfolio Developer">
+	<meta name="twitter:description"
+		content="Explora el portfolio de Adrián Gordo Prieto: desarrollador de videojuegos, web y apps móviles.">
+	<meta name="twitter:image" content="https://agp96.github.io/img/bio/foto_perfil.png">
+
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css"
+		integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/media-queries.css">
+
+	<link rel="shortcut icon" href="img/favicon/favicon.png">
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+
+</head>
+
+<body>
+	<div id="instructions">
+		<div class="col-3 col-md-2 col-lg-2 ins">
+			ASCENDER: W </div>
+		<div class="col-3 col-md-2 col-lg-2 ins">
+			DESCENDER: S </div>
+		<div class="col-3 col-md-2 col-lg-2 ins">
+			DISPARAR: K </div>
 		<div class="col-2 col-md-3 col-lg-4" id="score"></div>
-      </div>
-		<canvas id="canvas"></canvas>
-		
-    <div id="game-over-overlay"></div>
-
-    <div id="game-over">
-      <h1>GAME OVER</h1>
-      <button id="play-again" type="button" class="btn btn-primary">Juega de nuevo</button>	
-      <h2>Comparte tu resultado</h2>						
-	  <a id="scoreX" href="" target="_blank">Twitter</a>
-	  <a id="scoreW" href="" target="_blank">Whatsapp</a>
-	  <a id="scoreT" href="" target="_blank">Telegram</a>
 	</div>
-	
-    <script type="text/javascript" src="js/resources.js"></script>
-    <script type="text/javascript" src="js/input.js"></script>
-    <script type="text/javascript" src="js/sprite.js"></script>
-	<script src="js/game.js"></script>
-	
-		<!-- Nav -->
-		<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
-			<div class="container-fluid">
-			    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-			        <span class="navbar-toggler-icon"></span>
-			    </button>
-				<div class="navbar-collapse collapse" id="navbarNav">
-					<ul class="navbar-nav me-auto mb-sm-0 mb-md-0 mb-lg-0">
-						<li class="nav-item">
-							<a alt="Home" class="nav-link scroll-link" href="#home">HOME</a>
-						</li>
-						<li class="nav-item">
-							<a alt="Bio" class="nav-link scroll-link" href="#bio">BIO</a>
-						</li>
-						<li class="nav-item">
-							<a alt="Portfolio" class="nav-link scroll-link" href="#portfolio">PORTFOLIO</a>
-						</li>
-						<li class="nav-item">
-							<a alt="Cobtacto" class="nav-link scroll-link" href="#contacto">CONTACTO</a>
-						</li>
-					</ul>
-					<!--<div class="navbar-text d-flex">
-							<a alt="Sigueme en Instagram" href="https://www.instagram.com/agordoprieto/" target="_blank"><i class="fab fa-instagram"></i></a>
-							<a alt="Sigueme en Twitter" href="https://twitter.com/agordoprieto" target="_blank"><i class="fab fa-twitter"></i></a>
-							<a alt="Sigueme en Telegram" href="https://t.me/adriangordo"target="_blank"><i class="fab fa-telegram"></i></a>
-							<a alt="Sigueme en Linkedin" href="https://www.linkedin.com/in/adri%C3%A1ngordoprieto/" target="_blank"><i class="fab fa-linkedin"></i></a>
-							<a alt="Sigueme en Youtube" href="https://www.youtube.com/channel/UCIdE3oR1phv0dACMffkc-yw" target="_blank"><i class="fab fa-youtube"></i></a>
-						</div>-->
-				</div>
+	<canvas id="canvas" aria-label="Juego de disparos">
+		<section>
+			<h2>Misión: Destruye los asteroides</h2>
+			<p>Eres el piloto de una nave encargada de destruir asteroides.</p>
+
+			<h3>Instrucciones de control:</h3>
+			<ul>
+				<li><strong>Tecla W para ascender y Tecla S para descender</strong> Mover la nave por la pantalla.</li>
+				<li><strong>Tecla K para disparar</strong> Disparar láser.</li>
+			</ul>
+
+			<div id="marcador-accesible" aria-live="polite">
+				<p>Puntuación actual: <span id="score-fallback">0</span></p>
 			</div>
-		</nav>
-		
-		<!-- Top 
-		<div id="home">
-			<div class="thumbnail">
-				<img class="portada" src="img/portada/portada.jpg" alt="">
-				<div class="caption">
-					<h3>Desarrollador de videojuegos
-					</h3>
-					<h3>Desarrollador móvil
-					</h3>
-					<h3>Desarrollador web
-					</h3>
-				</div>
+
+			<p>Tu navegador no soporta Canvas. Por favor, actualízalo para jugar.</p>
+		</section>
+	</canvas>
+
+	<div id="game-over-overlay"></div>
+
+	<div id="game-over">
+		<h1>GAME OVER</h1>
+		<button id="play-again" type="button" class="btn btn-primary">Juega de nuevo</button>
+		<h2>Comparte tu resultado</h2>
+		<a id="scoreX" href="#" target="_blank" rel="noopener noreferrer"
+			aria-label="Compartir mi puntuación en X">X</a>
+		<a id="scoreW" href="#" target="_blank" rel="noopener noreferrer"
+			aria-label="Compartir mi puntuación por WhatsApp">WhatsApp</a>
+		<a id="scoreT" href="#" target="_blank" rel="noopener noreferrer"
+			aria-label="Compartir mi puntuación por Telegram">Telegram</a>
+	</div>
+
+	<script type="text/javascript" src="js/resources.js"></script>
+	<script type="text/javascript" src="js/input.js"></script>
+	<script type="text/javascript" src="js/sprite.js"></script>
+	<script src="js/game.js"></script>
+
+	<!-- Nav -->
+	<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
+		<div class="container-fluid">
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+				aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú de navegación">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="navbar-collapse collapse" id="navbarNav">
+				<ul class="navbar-nav me-auto mb-sm-0 mb-md-0 mb-lg-0">
+					<li class="nav-item">
+						<a title="Home" class="nav-link scroll-link" href="#home">HOME</a>
+					</li>
+					<li class="nav-item">
+						<a title="Bio" class="nav-link scroll-link" href="#bio">BIO</a>
+					</li>
+					<li class="nav-item">
+						<a title="Portfolio" class="nav-link scroll-link" href="#portfolio">PORTFOLIO</a>
+					</li>
+					<li class="nav-item">
+						<a title="Contacto" class="nav-link scroll-link" href="#contacto">CONTACTO</a>
+					</li>
+				</ul>
 			</div>
 		</div>
-		-->
-		<!-- Bio -->
-		<div id="bio">
+	</nav>
+
+	<!-- Bio -->
+	<main>
+		<section id="bio">
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-6 col-lg-4 offset-lg-2 bio-img">
-						<img id="foto" src="img/bio/foto_perfil.png" alt="Foto de Adrián Gordo">
+						<img class="foto" src="img/bio/foto_perfil.png" alt="Foto de Adrián Gordo">
 					</div>
 					<div class="col-12 col-md-6 col-lg-4 bio-textRight">
-						<p>Me llamo Adrián Gordo, soy Ingeniero Multimedia y me dedico a la programación y al diseño.</p>
-						<p>¿Qué es lo que más me motiva? Hacer casi cualquier cosa que aparezca en una pantalla, una web, una aplicación, un videojuego. Todo lo que sea interactivo y pueda darle a los botones.
+						<p>Soy Adrián Gordo, Ingeniero Multimedia y me dedico a la programación y al diseño.
+						</p>
+						<p>¿Qué es lo que más me motiva? Hacer casi cualquier cosa que aparezca en una pantalla, una
+							web,
+							una aplicación, un videojuego. Todo lo que sea interactivo y pueda darle a los botones.
 						</p>
 					</div>
 				</div>
@@ -116,136 +134,171 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-6 col-lg-6 order-sm-2 order-md-1 bio-textLeft">
-						<!--<p>Estudié el Grado de Ingeniería Multimedia, hasta entonces desconocía lo que era "Hello World" pero año tras año fui aprendiendo lenguajes como Java y C.</p>
-						<p>No me quedé ahí, en el Trabajo Fin de Grado me interesé por la Inteligencia Artificial, y mediante Python realicé una herramienta para el estudio de las emociones en los videojuegos.
-						</p>-->
-						<p>Estudié el Grado de Ingeniería Multimedia, hasta entonces desconocía lo que era "Hello World" pero año tras año fui aprendiendo lenguajes como Java y C.</p>
-						<p>No me quedé ahí, en el Trabajo Fin de Grado me interesé por la Inteligencia Artificial, y mediante Python realicé una herramienta para el estudio de las emociones en los videojuegos.
+						<p>Estudié el Grado de Ingeniería Multimedia, hasta entonces desconocía lo que era "Hello World"
+							pero año tras año fui aprendiendo lenguajes como Java y C.</p>
+						<p>No me quedé ahí, en el Trabajo Fin de Grado me interesé por la Inteligencia Artificial, y
+							mediante Python realicé una herramienta para el estudio de las emociones en los videojuegos.
 						</p>
 					</div>
 					<div class="col-12 col-md-6 col-lg-4 order-sm-1 order-md-2 bio-img">
-						<img id="foto" src="img/bio/foto_perfil2.png" alt="">
+						<img class="foto" src="img/bio/foto_perfil2.png"
+							alt="Foto de Adrián Gordo con el título de Grado" loading="lazy">
 					</div>
 				</div>
 			</div>
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-6 col-lg-4 offset-lg-2 bio-img">
-						<img id="foto" src="img/bio/foto_perfil3.png" alt="Foto de Adrián Gordo">
+						<img class="foto" src="img/bio/foto_perfil3.png" alt="Foto de Adrián Gordo en la CyberLeague"
+							loading="lazy">
 					</div>
 					<div class="col-12 col-md-6 col-lg-4 bio-textRight">
-						<!--<p>Tras acabar el Grado, cursé el Máster en Desarrollo de Software para Dispositivos Móviles, para especializarme tanto en Android, iOS como multiplataforma.</p>
-						<p>Para el Trabajo Fin de Máster, experimenté con el reconocimiento de voz y desarrollé un videojuego móvil que permitía ser jugado sin tocar la pantalla.
-						</p>-->
-						<p>Tras acabar el Grado, cursé el Máster en Desarrollo de Software para Dispositivos Móviles, dónde experimenté con el reconocimiento de voz en un videojuego móvil como Trabajo Fin de Máster.</p>
-						<p>Poco después, me interesó el ámbito de la Ciberseguridad, presentándome a la <a alt="National CyberLeague" href="https://www.nationalcyberleague.es/" >National CyberLeague</a> y llegando a la final con mis compañeros de equipo.
+						<p>Tras acabar el Grado, cursé el Máster en Desarrollo de Software para Dispositivos Móviles,
+							dónde
+							experimenté con el reconocimiento de voz en un videojuego móvil como Trabajo Fin de Máster.
+						</p>
+						<p>Poco después, me interesó el ámbito de la Ciberseguridad, presentándome a la <a
+								title="National CyberLeague" href="https://www.nationalcyberleague.es/" target="_blank"
+								rel="noopener noreferrer">National
+								CyberLeague</a> y llegando a la final con mis compañeros de equipo.
 						</p>
 					</div>
 				</div>
 			</div>
-		</div>
+		</section>
 
 		<!-- Portfolio -->
-		<div id="portfolio">
+		<section id="portfolio">
 			<div class="container">
+				<div class="row">
+					<div class="col">
+						<h2>Portfolio</h2>
+					</div>
+					<div class="row row-cols-1 row-cols-md-2 g-4">
+						<div class="col">
+							<div>
+								<img src="img/portfolio/Screenshot_CyberAdvanced.png" class="card-img-top"
+									alt="CyberAdvanced" loading="lazy">
+								<div class="card-body">
+									<h5 class="card-title">
+										<img src="img/portfolio/logoCyberAdvanced.png" alt="CyberAdvanced logo"
+											loading="lazy">
+										CyberAdvanced
+									</h5>
+									<div class="card-device">
+										<i class="fab fa-android fa-2x" aria-hidden="true"></i><i
+											class="fab fa-apple fa-2x" aria-hidden="true"></i>
+									</div>
+									<p class="card-text">Juego de estrategia en el que guiaremos mediante la voz
+										al científico McFry y a su mascota en misiones contra extraños enemigos</p>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div>
+								<img src="img/portfolio/Screenshot_RecklessJay.png" class="card-img-top"
+									alt="RecklessJay" loading="lazy">
+								<div class="card-body">
+									<h5 class="card-title">
+										<img src="img/portfolio/logoRecklessJay.png" alt="RecklessJay logo"
+											loading="lazy">
+										RecklessJay
+									</h5>
+									<div class="card-device"><i class="fab fa-android fa-2x" aria-hidden="true"></i><i
+											class="fab fa-apple fa-2x" aria-hidden="true"></i>
+									</div>
+									<p class="card-text">Ayuda a Jay
+										a esquivar los obstáculos y vigilantes que aparecen en la carretera en este
+										juego
+										arcade</p>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div>
+								<img src="img/portfolio/Screenshot_FastLap.png" class="card-img-top" alt="FastLap"
+									loading="lazy">
+								<div class="card-body">
+									<h5 class="card-title"><img src="img/portfolio/logoFastLap.png" alt="FastLap logo"
+											loading="lazy"> Fast
+										Lap</h5>
+									<div class="card-device">
+										<i class="fas fa-desktop fa-2x" aria-hidden="true"></i>
+									</div>
+									<p class="card-text">Fast-Lap es un juego de carreras basado en el clásico Micro
+										Machines
+										con estética cartoon dónde el escenario tiene un papel muy importante</p>
+								</div>
+							</div>
+						</div>
+						<div class="col">
+							<div>
+								<img src="img/portfolio/Screenshot_TwoFingerDeathNow.png" class="card-img-top"
+									alt="TwoFingerDeathNow" loading="lazy">
+								<div class="card-body">
+									<h5 class="card-title"><img src="img/portfolio/logoTwoFingerDeathNow.png"
+											alt="TwoFingerDeathNow logo" loading="lazy"> Two Finger Death Now</h5>
+
+									<div class="card-device">
+										<i class="fas fa-desktop fa-2x" aria-hidden="true"></i>
+									</div>
+									<p class="card-text">Juego para Amstrad CPC 464 en el que debes luchar contra
+										los maestros karatekas para convertirte en el mejor de la ciudad</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+		</section>
+	</main>
+
+	<!-- Contacto -->
+	<footer id="contacto">
+		<div class="container">
 			<div class="row">
-				<div class="col">
-					<h2>Portfolio</h2>
-				</div>			
-				<div class="row row-cols-1 row-cols-md-2 g-4">
-					<div class="col">
-						<div>
-							<img src="img/portfolio/Screenshot_CyberAdvanced.png" class="card-img-top" alt="CyberAdvanced">
-							<div class="card-body">
-								<h5 class="card-title">
-								<img src="img/portfolio/logoCyberAdvanced.png" alt="CyberAdvanced logo"> CyberAdvanced</h5>
-							<div class="card-device">
-								<i class="fab fa-android fa-2x"></i><i class="fab fa-apple fa-2x"></i>
-							</div>
-								<p class="card-text">Juego de estrategia en el que guiaremos mediante la voz 
-								al científico McFry y a su mascota en misiones contra extraños enemigos</p>
-							</div>
-						</div>
+				<div class="col-md-12 footer">
+					<h3>Contacto</h3>
+					<div class="footer-social">
+						<a title="Enviar email" href="mailto:agpalmoradi@gmail.com"> Email <i class="far fa-envelope"
+								aria-hidden="true"></i></a>
+						<a title="Sígueme en Instagram" href="https://www.instagram.com/agordoprieto/" target="_blank"
+							rel="noopener noreferrer"> Instagram <i class="fab fa-instagram" aria-hidden="true"></i></a>
+						<a title="Sígueme en Twitter" href="https://twitter.com/agordoprieto" target="_blank"
+							rel="noopener noreferrer"> Twitter
+							<i class="fab fa-twitter" aria-hidden="true"></i></a>
+						<a title="Sígueme en Telegram" href="https://t.me/adriangordo" target="_blank"
+							rel="noopener noreferrer"> Telegram <i class="fab fa-telegram" aria-hidden="true"></i></a>
+						<a title="Sígueme en LinkedIn" href="https://www.linkedin.com/in/adri%C3%A1ngordoprieto/"
+							target="_blank" rel="noopener noreferrer"> LinkedIn <i class="fab fa-linkedin"
+								aria-hidden="true"></i></a>
+						<a title="Sígueme en Youtube" href="https://www.youtube.com/channel/UCIdE3oR1phv0dACMffkc-yw"
+							target="_blank" rel="noopener noreferrer"> Youtube <i class="fab fa-youtube"
+								aria-hidden="true"></i></a>
 					</div>
-					<div class="col">
-						<div>
-							<img src="img/portfolio/Screenshot_RecklessJay.png" class="card-img-top" alt="RecklessJay">
-							<div class="card-body">
-								<h5 class="card-title">
-								<img src="img/portfolio/logoRecklessJay.png" alt="RecklessJay logo"> RecklessJay</h5>
-							<div class="card-device"><i class="fab fa-android fa-2x"></i><i class="fab fa-apple fa-2x"></i>
-							</div>
-								<p class="card-text">Ayuda a Jay 
-								a esquivar los obstáculos y vigilantes que aparecen en la carretera en este juego arcade</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div>
-							<img src="img/portfolio/Screenshot_FastLap.png" class="card-img-top" alt="FastLap">
-							<div class="card-body">
-								<h5 class="card-title"><img src="img/portfolio/logoFastLap.png" alt="FastLap logo"> Fast Lap</h5>
-							<div class="card-device">
-							<i class="fas fa-desktop fa-2x"></i>
-							</div>
-								<p class="card-text">Fast-Lap es un juego de carreras basado en el clásico Micro Machines
-								con estética cartoon dónde el escenario tiene un papel muy importante</p>
-							</div>
-						</div>
-					</div>
-					<div class="col">
-						<div>
-							<img src="img/portfolio/Screenshot_TwoFingerDeathNow.png" class="card-img-top" alt="TwoFingerDeathNow">
-							<div class="card-body">
-								<h5 class="card-title"><img src="img/portfolio/logoTwoFingerDeathNow.png" alt="TwoFingerDeathNow logo"> Two Finger Death Now</h5>
-								
-							<div class="card-device">
-							<i class="fas fa-desktop fa-2x"></i>
-							</div>
-								<p class="card-text">Juego para Amstrad CPC 464 en el que debes luchar contra 
-								los maestros karatekas para convertirte en el mejor de la ciudad</p>
-							</div>
-						</div>
+					<div class="footer-copyright">
+						<p><i class="fab fa-creative-commons" aria-hidden="true"></i> Adrián Gordo Prieto</p>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<!-- Contacto -->
-		<footer id="contacto">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 footer">
-						<h3>Contacto</h3>
-						<div class="footer-social">	                  	
-							<a alt="Email us" href="mailto:agpalmoradi@gmail.com">  Email <i class="far fa-envelope"></i></a>
-							<a alt="Sigueme en Instagram" href="https://www.instagram.com/agordoprieto/" target="_blank"> Instagram <i class="fab fa-instagram"></i></a>
-							<a alt="Sigueme en Twitter" href="https://twitter.com/agordoprieto" target="_blank"> Twitter <i class="fab fa-twitter"></i></a>
-							<a alt="Sigueme en Telegram" href="https://t.me/adriangordo" target="_blank"> Telegram <i class="fab fa-telegram"></i></a>
-							<a alt="Sigueme en Linkedin" href="https://www.linkedin.com/in/adri%C3%A1ngordoprieto/" target="_blank"> LinkedIn <i class="fab fa-linkedin"></i></a>
-							<a alt="Sigueme en Youtube" href="https://www.youtube.com/channel/UCIdE3oR1phv0dACMffkc-yw" target="_blank"> Youtube <i class="fab fa-youtube"></i></a>
-						</div>
-						<div class="footer-copyright">
-							<a alt="Política de Cookies" href="#bio">Cookies</a>
-							<p><i class="fab fa-creative-commons"></i> Adrián Gordo Prieto</p>
-						</div>
-					</div>
-				</div>
-			</div>
-			
-			<div class="footer-bottom d-grid">
-				<a alt="Sube al principio de la página" href="#home" class="btn btn-lg" role="button"><i class="fas fa-chevron-up"></i></a>
-			</div>
-			
-		</footer>
+		<div class="footer-bottom d-grid">
+			<a href="#home" aria-label="Sube al principio de la página" title="Subir">
+				<i class="fas fa-chevron-up" aria-hidden="true"></i>
+			</a>
+		</div>
 
-		<!-- Optional JavaScript -->
-		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>
-	    <script src="js/scripts.js"></script>
+	</footer>
 
-	</body>
-	
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
+		integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u"
+		crossorigin="anonymous"></script>
+	<script src="js/scripts.js"></script>
+
+</body>
+
 </html>
