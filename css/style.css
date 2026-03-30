@@ -2,9 +2,10 @@ html {
 	scroll-behavior: smooth;
 }
 
-body{
+body {
 	background-color: #111111;
-    color: white;//#0D0E0E #181A1B #111111
+	color: white;
+	/*#0D0E0E #181A1B #111111*/
 }
 
 .inicio:hover {
@@ -15,143 +16,146 @@ body{
 /***** Game *****/
 
 #instructions {
-    margin-top: 50px;   
-    color: white;
+	margin-top: 50px;
+	color: white;
 	text-align: center;
 }
 
-#ins {
-	vertical-align: middle; 
+.ins {
+	vertical-align: middle;
 	display: inline-block;
 }
 
 #score {
-	vertical-align: middle; 
+	vertical-align: middle;
 	display: inline-block;
 }
 
 #game-over {
-    margin: auto;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    display: none;
-}
-
-#game-over {
-    height: 200px;
-    text-align: center;
-    color: white;
+	height: 200px;
+	text-align: center;
+	color: white;
+	margin: auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1;
+	display: none;
 }
 
 #game-over h1 {
-    font-size: 3em;
-    font-family: sans-serif;
+	font-size: 3em;
+	font-family: sans-serif;
 }
 
 #game-over button {
-    font-size: 1.5em;
+	font-size: 1.5em;
 }
 
-#game-over a{
-	vertical-align: middle; 
+#game-over a {
+	vertical-align: middle;
 	display: inline-block;
 	text-align: center;
 	width: 80px;
 	height: 40px;
 	font-size: 14px;
-	color: #fff; 
-	color: rgba(255, 255, 255, 0.8); 
-    line-height: 30px;    
-	text-decoration:none;
+	color: #fff;
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 30px;
+	text-decoration: none;
 }
-#game-over a:hover, #game-over a:focus { color: #fff; }
-	
+
+#game-over a:hover,
+#game-over a:focus {
+	color: #fff;
+}
+
 #play-again {
-	vertical-align: middle; 
+	vertical-align: middle;
 	display: inline-block;
 }
 
 /***** Navbar *****/
 
-.navbar-nav{
+.navbar-nav {
 	margin-left: 60px;
 }
 
 .navbar.scrolled {
-  background-color: #000 !important;
-  transition: background-color 200ms linear;
+	background-color: #000 !important;
+	transition: background-color 200ms linear;
 }
 
-.navbar-dark .navbar-nav { 
-	font-size: 15px; 
+.navbar-dark .navbar-nav {
+	font-size: 15px;
 }
 
-.navbar-dark .navbar-nav .nav-link { 
-	color: #fff; 
-	color: rgba(255, 255, 255, 0.8); 
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff;
+	color: rgba(255, 255, 255, 0.8);
 }
 
-.navbar-dark .navbar-nav .nav-link:hover { 
-	color: #fff; 
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: #fff;
 }
 
-.navbar-dark .navbar-nav .nav-link:focus { 
-	color: #fff; 
-	outline: 0; 
+.navbar-dark .navbar-nav .nav-link:focus {
+	color: #fff;
+	outline: 0;
 }
 
-.navbar-expand-md .navbar-nav .nav-link { 
-	padding-left: 1rem; 
-	padding-right: 1rem; 
+.navbar-expand-md .navbar-nav .nav-link {
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
-.navbar-text{
+.navbar-text {
 	margin-right: 120px;
 }
 
-.navbar-dark .navbar-text a { 
-	margin: 0 8px; 
-	font-size: 26px; 
-	color: #fff; 
-	color: rgba(255, 255, 255, 0.8); 
+.navbar-dark .navbar-text a {
+	margin: 0 8px;
+	font-size: 26px;
+	color: #fff;
+	color: rgba(255, 255, 255, 0.8);
 }
 
-.navbar-dark .navbar-text a:hover, 
-.navbar-dark .navbar-text a:focus { 
-	color: #fff; 
+.navbar-dark .navbar-text a:hover,
+.navbar-dark .navbar-text a:focus {
+	color: #fff;
 }
 
 /***** Home *****/
 
 #home {
-  position: relative;    /* para poder posicionar el texto de forma absoluta */
-  display: inline-block; /* para que solo ocupe el ancho de la imagen */
+	position: relative;
+	/* para poder posicionar el texto de forma absoluta */
+	display: inline-block;
+	/* para que solo ocupe el ancho de la imagen */
 }
 
 .thumbnail {
-    position: relative;
-    display: inline-block;
+	position: relative;
+	display: inline-block;
 }
 
 .caption {
-    position: absolute;
-    top: 50%;
-    left: 70%;
-    transform: translate( -50%, -50% );
-    text-align: center;
-    color: white;
-    font-weight: bold;
+	position: absolute;
+	top: 50%;
+	left: 70%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	color: white;
+	font-weight: bold;
 }
 
 .portada {
 	width: 100%;
 	height: 300px;
-    object-fit: cover;
-    object-position: bottom;
+	object-fit: cover;
+	object-position: bottom;
 }
 
 
@@ -167,7 +171,7 @@ body{
 	margin-bottom: 0px;
 }
 
-#foto{
+.foto {
 	max-width: 80%;
 	max-height: 80%;
 }
@@ -188,12 +192,16 @@ body{
 }
 
 #bio a {
-	color: #fff; 
-	color: rgba(255, 255, 255, 0.8); 
-    line-height: 30px;    
-	text-decoration:none;
+	color: #fff;
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 30px;
+	text-decoration: none;
 }
-#bio a:hover, #bio a:focus { color: #fff; }
+
+#bio a:hover,
+#bio a:focus {
+	color: #fff;
+}
 
 /***** Portfolio *****/
 
@@ -249,21 +257,25 @@ footer {
 }
 
 .footer-social a {
-	vertical-align: middle; 
+	vertical-align: middle;
 	display: inline-block;
 	text-align: center;
 	width: 80px;
 	height: 40px;
 	font-size: 14px;
-	color: #fff; 
-	color: rgba(255, 255, 255, 0.8); 
-    line-height: 30px;    
-	text-decoration:none;
+	color: #fff;
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 30px;
+	text-decoration: none;
 }
-.footer-social a:hover, .footer-social a:focus { color: #fff; }
 
-.footer-social a i { 
-	vertical-align: middle; 
+.footer-social a:hover,
+.footer-social a:focus {
+	color: #fff;
+}
+
+.footer-social a i {
+	vertical-align: middle;
 	text-align: center;
 	margin-left: 15px;
 	margin-right: 15px;
@@ -277,31 +289,34 @@ footer {
 
 .footer-copyright a {
 	font-size: 14px;
-	color: #fff; 
-	color: rgba(255, 255, 255, 0.8); 
-    line-height: 30px;    
-	text-decoration:none;
+	color: #fff;
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 30px;
+	text-decoration: none;
 }
 
-.footer-copyright a:hover, .footer-social a:focus { color: #fff; }
+.footer-copyright a:hover,
+.footer-copyright a:focus {
+	color: #fff;
+}
 
 .footer-bottom {
 	margin: 20px 0 0 0;
 	padding-top: 15px;
 	text-align: center;
-    color: #666;
+	color: #666;
 }
 
 .footer-bottom a {
 	font-size: 32px;
-	color: #fff; 
-	color: rgba(255, 255, 255, 0.8); 
-    line-height: 30px;
+	color: #fff;
+	color: rgba(255, 255, 255, 0.8);
+	line-height: 30px;
 	background: #000;
 }
 
-.footer-bottom a:hover, .footer-bottom a:focus { 
-    color: #fff;
+.footer-bottom a:hover,
+.footer-bottom a:focus {
+	color: #fff;
 	background: #2C2C2C;
 }
-
