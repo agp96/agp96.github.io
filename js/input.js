@@ -6,7 +6,7 @@
         var code = event.key;
         var key;
 
-        switch (code) {
+        switch (code.toLowerCase()) {
             case 'k':
                 key = 'SHOOT'; break;
             case 'w':
@@ -14,11 +14,10 @@
             case 's':
                 key = 'DOWN'; break;
             default:
-                // Convert ASCII codes to letters
-                key = String.fromCharCode(code);
+                key = code;
         }
 
-        pressedKeys[key] = status;
+        pressedKeys[key.toUpperCase()] = status;
     }
 
     document.addEventListener('keydown', function (e) {

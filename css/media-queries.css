@@ -11,9 +11,7 @@
 
 @media (min-width: 768px) and (max-width: 991px) {
 
-	.card-img-top {
-		width: 100%;
-	}
+
 
 	.bio-textLeft {
 		padding-right: 0px;
@@ -25,6 +23,10 @@
 }
 
 @media (max-width: 767px) {
+	#portfolioCarousel video {
+		aspect-ratio: 16 / 9;
+		max-height: none;
+	}
 
 	.navbar.navbar-no-bg {
 		background: #444;
@@ -83,9 +85,7 @@
 		margin-bottom: 0px;
 	}
 
-	.card-img-top {
-		width: 100%;
-	}
+
 
 	.footer-social {
 		padding: 0 0 20px 0;

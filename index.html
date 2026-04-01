@@ -49,37 +49,39 @@
 			DISPARAR: K </div>
 		<div class="col-2 col-md-3 col-lg-4" id="score"></div>
 	</div>
-	<canvas id="canvas" aria-label="Juego de disparos">
-		<section>
-			<h2>Misión: Destruye los asteroides</h2>
-			<p>Eres el piloto de una nave encargada de destruir asteroides.</p>
+	<div id="game-container" style="position: relative; width: 100%; display: flex; justify-content: center;">
+		<canvas id="canvas" aria-label="Juego de disparos">
+			<section>
+				<h2>Misión: Destruye los asteroides</h2>
+				<p>Eres el piloto de una nave encargada de destruir asteroides.</p>
 
-			<h3>Instrucciones de control:</h3>
-			<ul>
-				<li><strong>Tecla W para ascender y Tecla S para descender</strong> Mover la nave por la pantalla.</li>
-				<li><strong>Tecla K para disparar</strong> Disparar láser.</li>
-			</ul>
+				<h3>Instrucciones de control:</h3>
+				<ul>
+					<li><strong>Tecla W para ascender y Tecla S para descender</strong> Mover la nave por la pantalla.</li>
+					<li><strong>Tecla K para disparar</strong> Disparar láser.</li>
+				</ul>
 
-			<div id="marcador-accesible" aria-live="polite">
-				<p>Puntuación actual: <span id="score-fallback">0</span></p>
-			</div>
+				<div id="marcador-accesible" aria-live="polite">
+					<p>Puntuación actual: <span id="score-fallback">0</span></p>
+				</div>
 
-			<p>Tu navegador no soporta Canvas. Por favor, actualízalo para jugar.</p>
-		</section>
-	</canvas>
+				<p>Tu navegador no soporta Canvas. Por favor, actualízalo para jugar.</p>
+			</section>
+		</canvas>
 
-	<div id="game-over-overlay"></div>
+		<div id="game-over-overlay"></div>
 
-	<div id="game-over">
-		<h1>GAME OVER</h1>
-		<button id="play-again" type="button" class="btn btn-primary">Juega de nuevo</button>
-		<h2>Comparte tu resultado</h2>
-		<a id="scoreX" href="#" target="_blank" rel="noopener noreferrer"
-			aria-label="Compartir mi puntuación en X">X</a>
-		<a id="scoreW" href="#" target="_blank" rel="noopener noreferrer"
-			aria-label="Compartir mi puntuación por WhatsApp">WhatsApp</a>
-		<a id="scoreT" href="#" target="_blank" rel="noopener noreferrer"
-			aria-label="Compartir mi puntuación por Telegram">Telegram</a>
+		<div id="game-over">
+			<h1>GAME OVER</h1>
+			<button id="play-again" type="button" class="btn btn-primary">Juega de nuevo</button>
+			<h2>Comparte tu resultado</h2>
+			<a id="scoreX" href="#" target="_blank" rel="noopener noreferrer"
+				aria-label="Compartir mi puntuación en X">X</a>
+			<a id="scoreW" href="#" target="_blank" rel="noopener noreferrer"
+				aria-label="Compartir mi puntuación por WhatsApp">WhatsApp</a>
+			<a id="scoreT" href="#" target="_blank" rel="noopener noreferrer"
+				aria-label="Compartir mi puntuación por Telegram">Telegram</a>
+		</div>
 	</div>
 
 	<script type="text/javascript" src="js/resources.js"></script>
@@ -122,7 +124,7 @@
 						<img class="foto" src="img/bio/foto_perfil.png" alt="Foto de Adrián Gordo">
 					</div>
 					<div class="col-12 col-md-6 col-lg-4 bio-textRight">
-						<p>Soy Adrián Gordo, Ingeniero Multimedia y me dedico a la programación y al diseño.
+						<p>Soy Adrián Gordo, me dedico al desarrollo de software.
 						</p>
 						<p>¿Qué es lo que más me motiva? Hacer casi cualquier cosa que aparezca en una pantalla, una
 							web,
@@ -134,10 +136,14 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-12 col-md-6 col-lg-6 order-sm-2 order-md-1 bio-textLeft">
-						<p>Estudié el Grado de Ingeniería Multimedia, hasta entonces desconocía lo que era "Hello World"
-							pero año tras año fui aprendiendo lenguajes como Java y C.</p>
+						<p>He desarrollado varios proyectos en C y Java, en el ámbito web con HTML, Javascript y CSS3, y
+							en videojuegos con C++. </p>
 						<p>No me quedé ahí, en el Trabajo Fin de Grado me interesé por la Inteligencia Artificial, y
-							mediante Python realicé una herramienta para el estudio de las emociones en los videojuegos.
+							mediante Python realicé una <a
+								title="Herramienta para el estudio de las emociones en los videojuegos en Github"
+								href="https://github.com/agp96/Music-Classification-Audioset" target="_blank"
+								rel="noopener noreferrer">herramienta</a> para el estudio de las emociones en los
+							videojuegos.
 						</p>
 					</div>
 					<div class="col-12 col-md-6 col-lg-4 order-sm-1 order-md-2 bio-img">
@@ -152,9 +158,11 @@
 						<img class="foto" src="img/bio/foto_perfil3.png" alt="Foto de Adrián Gordo en la CyberLeague">
 					</div>
 					<div class="col-12 col-md-6 col-lg-4 bio-textRight">
-						<p>Tras acabar el Grado, cursé el Máster en Desarrollo de Software para Dispositivos Móviles,
-							dónde
-							experimenté con el reconocimiento de voz en un videojuego móvil como Trabajo Fin de Máster.
+						<p>Luego cursé el Máster en Desarrollo de Software para Dispositivos Móviles,
+							adquiriendo conocimientos en Swift, Android Studio y Unity. Además,
+							experimenté con el reconocimiento de voz en un <a title="CyberAdvanced en Github"
+								href="https://github.com/agp96/CyberAdvanced" target="_blank"
+								rel="noopener noreferrer">videojuego móvil</a> como Trabajo Fin de Máster.
 						</p>
 						<p>Poco después, me interesó el ámbito de la Ciberseguridad, presentándome a la <a
 								title="National CyberLeague" href="https://www.nationalcyberleague.es/" target="_blank"
@@ -166,87 +174,124 @@
 			</div>
 		</section>
 
-		<!-- Portfolio -->
 		<section id="portfolio">
 			<div class="container">
 				<div class="row">
 					<div class="col">
 						<h2>Portfolio</h2>
 					</div>
-					<div class="row row-cols-1 row-cols-md-2 g-4">
-						<div class="col">
-							<div>
-								<img src="img/portfolio/Screenshot_CyberAdvanced.png" class="card-img-top"
-									alt="CyberAdvanced" loading="lazy">
-								<div class="card-body">
-									<h5 class="card-title">
-										<img src="img/portfolio/logoCyberAdvanced.png" alt="CyberAdvanced logo"
-											loading="lazy">
-										CyberAdvanced
-									</h5>
-									<div class="card-device">
-										<i class="fab fa-android fa-2x" aria-hidden="true"></i><i
-											class="fab fa-apple fa-2x" aria-hidden="true"></i>
-									</div>
-									<p class="card-text">Juego de estrategia en el que guiaremos mediante la voz
-										al científico McFry y a su mascota en misiones contra extraños enemigos</p>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div>
-								<img src="img/portfolio/Screenshot_RecklessJay.png" class="card-img-top"
-									alt="RecklessJay" loading="lazy">
-								<div class="card-body">
-									<h5 class="card-title">
-										<img src="img/portfolio/logoRecklessJay.png" alt="RecklessJay logo"
-											loading="lazy">
-										RecklessJay
-									</h5>
-									<div class="card-device"><i class="fab fa-android fa-2x" aria-hidden="true"></i><i
-											class="fab fa-apple fa-2x" aria-hidden="true"></i>
-									</div>
-									<p class="card-text">Ayuda a Jay
-										a esquivar los obstáculos y vigilantes que aparecen en la carretera en este
-										juego
-										arcade</p>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div>
-								<img src="img/portfolio/Screenshot_FastLap.png" class="card-img-top" alt="FastLap"
-									loading="lazy">
-								<div class="card-body">
-									<h5 class="card-title"><img src="img/portfolio/logoFastLap.png" alt="FastLap logo"
-											loading="lazy"> Fast
-										Lap</h5>
-									<div class="card-device">
-										<i class="fas fa-desktop fa-2x" aria-hidden="true"></i>
-									</div>
-									<p class="card-text">Fast-Lap es un juego de carreras basado en el clásico Micro
-										Machines
-										con estética cartoon dónde el escenario tiene un papel muy importante</p>
-								</div>
-							</div>
-						</div>
-						<div class="col">
-							<div>
-								<img src="img/portfolio/Screenshot_TwoFingerDeathNow.png" class="card-img-top"
-									alt="TwoFingerDeathNow" loading="lazy">
-								<div class="card-body">
-									<h5 class="card-title"><img src="img/portfolio/logoTwoFingerDeathNow.png"
-											alt="TwoFingerDeathNow logo" loading="lazy"> Two Finger Death Now</h5>
+				</div>
 
-									<div class="card-device">
-										<i class="fas fa-desktop fa-2x" aria-hidden="true"></i>
-									</div>
-									<p class="card-text">Juego para Amstrad CPC 464 en el que debes luchar contra
-										los maestros karatekas para convertirte en el mejor de la ciudad</p>
+				<div id="portfolioCarousel" class="carousel slide" data-bs-ride="false">
+
+					<!-- Items -->
+					<div class="carousel-inner">
+
+						<div class="carousel-item active">
+							<div class="row align-items-center portfolio-slide">
+								<div class="col-12 col-md-5 portfolio-caption">
+									<h5><img src="img/portfolio/logoCyberAdvanced.png" alt="CyberAdvanced logo">
+										CyberAdvanced</h5>
+									<p>Juego móvil de estrategia en el que guiaremos mediante la voz al científico McFry
+										y a su mascota en misiones contra extraños enemigos</p>
+								</div>
+								<div class="col-12 col-md-7">
+									<video class="d-block w-100" src="videos/CyberAdvanced.mp4" controls muted
+										preload="auto"></video>
 								</div>
 							</div>
 						</div>
+
+						<div class="carousel-item">
+							<div class="row align-items-center portfolio-slide">
+								<div class="col-12 col-md-5 portfolio-caption">
+									<h5><img src="img/portfolio/logoRecklessJay.png" alt="RecklessJay logo"> RecklessJay
+									</h5>
+									<p>Ayuda a Jay a esquivar los obstáculos y vigilantes que aparecen en la carretera
+										en
+										este juego móvil</p>
+								</div>
+								<div class="col-12 col-md-7">
+									<video class="d-block w-100" src="videos/RecklessJay.mp4" controls muted
+										preload="none"></video>
+								</div>
+							</div>
+						</div>
+
+						<div class="carousel-item">
+							<div class="row align-items-center portfolio-slide">
+								<div class="col-12 col-md-5 portfolio-caption">
+									<h5><img src="img/portfolio/logoFastLap.png" alt="FastLap logo"> Fast Lap</h5>
+									<p>Fast-Lap es un juego de carreras basado en el clásico Micro Machines con estética
+										cartoon</p>
+								</div>
+								<div class="col-12 col-md-7">
+									<video class="d-block w-100" src="videos/FastLap.mp4" controls muted
+										preload="none"></video>
+								</div>
+							</div>
+						</div>
+
+						<div class="carousel-item">
+							<div class="row align-items-center portfolio-slide">
+								<div class="col-12 col-md-5 portfolio-caption">
+									<h5><img src="img/portfolio/logoTwoFingerDeathNow.png" alt="TwoFingerDeathNow logo">
+										Two Finger Death Now</h5>
+									<p>Juego para Amstrad CPC 464 en el que debes luchar contra los maestros karatekas
+									</p>
+								</div>
+								<div class="col-12 col-md-7">
+									<video class="d-block w-100" src="videos/TwoFingerDeathNow.mp4" controls muted
+										preload="none"></video>
+								</div>
+							</div>
+						</div>
+
+						<!-- Controles -->
+						<button class="carousel-control-prev" type="button" data-bs-target="#portfolioCarousel"
+							data-bs-slide="prev">
+							<span class="carousel-control-prev-icon"></span>
+						</button>
+						<button class="carousel-control-next" type="button" data-bs-target="#portfolioCarousel"
+							data-bs-slide="next">
+							<span class="carousel-control-next-icon"></span>
+						</button>
+
 					</div>
+
+					<!-- Autoplay y control de vídeos en el carrusel -->
+					<script>
+						document.addEventListener("DOMContentLoaded", function () {
+							const carousel = document.getElementById('portfolioCarousel');
+							const videos = carousel.querySelectorAll('video');
+
+							// 1. Pausar todos los vídeos al empezar a cambiar la tarjeta
+							carousel.addEventListener('slide.bs.carousel', function () {
+								videos.forEach(v => v.pause());
+							});
+
+							// 2. Reproducir el vídeo de la tarjeta actual al terminar la animación
+							carousel.addEventListener('slid.bs.carousel', function (e) {
+								const activeVideo = e.relatedTarget.querySelector('video');
+								if (activeVideo) activeVideo.play().catch(() => {});
+							});
+
+							// 3. Reproducir automáticamente al hacer scroll hasta esta zona
+							const observer = new IntersectionObserver((entries) => {
+								entries.forEach(entry => {
+									if (entry.isIntersecting) {
+										const activeVideo = carousel.querySelector('.carousel-item.active video');
+										if (activeVideo) activeVideo.play().catch(() => {});
+									} else {
+										videos.forEach(v => v.pause());
+									}
+								});
+							}, { threshold: 0.5 }); // Mínimo de visibilidad del 50%
+
+							observer.observe(carousel);
+						});
+					</script>
+
 				</div>
 		</section>
 	</main>
@@ -275,7 +320,8 @@
 								aria-hidden="true"></i></a>
 					</div>
 					<div class="footer-copyright">
-						<p><i class="fab fa-creative-commons" aria-hidden="true"></i> Adrián Gordo Prieto</p>
+						<p><i class="fab fa-creative-commons" aria-hidden="true"></i> Adrián Gordo
+							Prieto</p>
 					</div>
 				</div>
 			</div>
@@ -291,7 +337,7 @@
 
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
 		integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u"
