@@ -57,7 +57,8 @@
 
 				<h3>Instrucciones de control:</h3>
 				<ul>
-					<li><strong>Tecla W para ascender y Tecla S para descender</strong> Mover la nave por la pantalla.</li>
+					<li><strong>Tecla W para ascender y Tecla S para descender</strong> Mover la nave por la pantalla.
+					</li>
 					<li><strong>Tecla K para disparar</strong> Disparar láser.</li>
 				</ul>
 
@@ -171,34 +172,33 @@
 						</p>
 					</div>
 				</div>
-			<!-- Sección del Clasificador de Audio Optimizada -->
-			<div class="container mt-4">
-			    <div class="row justify-content-center">
-			        <!-- Reducimos el ancho de col-lg-10 a col-lg-6 para que sea más estrecho -->
-			        <div class="col-12 col-md-8 col-lg-6">
-			            <div style="background: #1a1a1a; padding: 15px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden;">
-			                <!-- Título más pequeño -->
-			                <h3 style="color: #fff; font-family: 'Open Sans', sans-serif; text-align: center; margin-bottom: 15px; font-size: 1.25rem;">
-			                    <i class="fas fa-brain"></i> IA: Music Mood Classifier
-			                </h3>
-			                
-			                <!-- Iframe con altura reducida (500px es suficiente para la nueva interfaz compacta) -->
-			                <iframe
-			                    src="https://huggingface.co/embed/agp96/VideoGameMusicMoodClassification/+"
-			                    frameborder="0"
-			                    width="100%"
-			                    height="500"
-			                    style="border: none; border-radius: 8px; background: transparent;"
-			                ></iframe>
-			                
-			                <!-- Nota al pie más sutil -->
-			                <p style="color: #666; font-size: 0.75em; text-align: center; margin-top: 10px; font-style: italic; line-height: 1.2;">
-			                    Inferencia en tiempo real (VGGish) via Hugging Face.
-			                </p>
-			            </div>
-			        </div>
-			    </div>
-			</div>
+				<!-- Sección del Clasificador de Audio Optimizada -->
+				<div class="container mt-4">
+					<div class="row justify-content-center">
+						<!-- Reducimos el ancho de col-lg-10 a col-lg-6 para que sea más estrecho -->
+						<div class="col-12 col-md-8 col-lg-6">
+							<div
+								style="background: #1a1a1a; padding: 15px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden;">
+								<!-- Título más pequeño -->
+								<h3
+									style="color: #fff; font-family: 'Open Sans', sans-serif; text-align: center; margin-bottom: 15px; font-size: 1.25rem;">
+									<i class="fas fa-brain"></i> IA: Music Mood Classifier
+								</h3>
+
+								<!-- Iframe con altura reducida (500px es suficiente para la nueva interfaz compacta) -->
+								<iframe src="https://huggingface.co/embed/agp96/VideoGameMusicMoodClassification/+"
+									frameborder="0" width="100%" height="500"
+									style="border: none; border-radius: 8px; background: transparent;"></iframe>
+
+								<!-- Nota al pie más sutil -->
+								<p
+									style="color: #666; font-size: 0.75em; text-align: center; margin-top: 10px; font-style: italic; line-height: 1.2;">
+									Inferencia en tiempo real (VGGish) via Hugging Face.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
 		</section>
 
 		<section id="portfolio">
@@ -210,6 +210,18 @@
 				</div>
 
 				<div id="portfolioCarousel" class="carousel slide" data-bs-ride="false">
+
+					<!-- Indicadores -->
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="0" class="active"
+							aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="1"
+							aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="2"
+							aria-label="Slide 3"></button>
+						<button type="button" data-bs-target="#portfolioCarousel" data-bs-slide-to="3"
+							aria-label="Slide 4"></button>
+					</div>
 
 					<!-- Items -->
 					<div class="carousel-inner">
@@ -232,7 +244,8 @@
 						<div class="carousel-item">
 							<div class="row align-items-center portfolio-slide">
 								<div class="col-12 col-md-5 portfolio-caption">
-									<h5><img src="img/portfolio/logoRecklessJay.png" alt="Logotipo de Reckless Jay"> RecklessJay
+									<h5><img src="img/portfolio/logoRecklessJay.png" alt="Logotipo de Reckless Jay">
+										RecklessJay
 									</h5>
 									<p>Ayuda a Jay a esquivar los obstáculos y vigilantes que aparecen en la carretera
 										en
@@ -248,7 +261,8 @@
 						<div class="carousel-item">
 							<div class="row align-items-center portfolio-slide">
 								<div class="col-12 col-md-5 portfolio-caption">
-									<h5><img src="img/portfolio/logoFastLap.png" alt="Logotipo de Fast Lap"> Fast Lap</h5>
+									<h5><img src="img/portfolio/logoFastLap.png" alt="Logotipo de Fast Lap"> Fast Lap
+									</h5>
 									<p>Fast-Lap es un juego de carreras basado en el clásico Micro Machines con estética
 										cartoon</p>
 								</div>
@@ -262,7 +276,8 @@
 						<div class="carousel-item">
 							<div class="row align-items-center portfolio-slide">
 								<div class="col-12 col-md-5 portfolio-caption">
-									<h5><img src="img/portfolio/logoTwoFingerDeathNow.png" alt="Logotipo de Two Finger Death Now">
+									<h5><img src="img/portfolio/logoTwoFingerDeathNow.png"
+											alt="Logotipo de Two Finger Death Now">
 										Two Finger Death Now</h5>
 									<p>Juego para Amstrad CPC 464 en el que debes luchar contra los maestros karatekas
 									</p>
@@ -300,7 +315,7 @@
 							// 2. Reproducir el vídeo de la tarjeta actual al terminar la animación
 							carousel.addEventListener('slid.bs.carousel', function (e) {
 								const activeVideo = e.relatedTarget.querySelector('video');
-								if (activeVideo) activeVideo.play().catch(() => {});
+								if (activeVideo) activeVideo.play().catch(() => { });
 							});
 
 							// 3. Reproducir automáticamente al hacer scroll hasta esta zona
@@ -308,7 +323,7 @@
 								entries.forEach(entry => {
 									if (entry.isIntersecting) {
 										const activeVideo = carousel.querySelector('.carousel-item.active video');
-										if (activeVideo) activeVideo.play().catch(() => {});
+										if (activeVideo) activeVideo.play().catch(() => { });
 									} else {
 										videos.forEach(v => v.pause());
 									}
@@ -365,9 +380,8 @@
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js"
-		integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u"
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-kQtW33rZJAHjgefvhyyzcGF3C5TFyBQBA13V1RKPf4uH+bwyzQxZ6CmMZHmNBEfJ"
 		crossorigin="anonymous"></script>
 	<script src="js/scripts.js"></script>
 
