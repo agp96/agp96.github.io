@@ -8,7 +8,9 @@ body {
 	/*#0D0E0E #181A1B #111111*/
 }
 
-
+section[id] {
+	scroll-margin-top: 70px;
+}
 
 /***** Game *****/
 
