@@ -171,25 +171,29 @@
 						</p>
 					</div>
 				</div>
-			<!-- Sección del Clasificador de Audio -->
-			<div class="container mt-5">
-			    <div class="row">
-			        <div class="col-12 col-lg-10 offset-lg-1">
-			            <div style="background: #1a1a1a; padding: 25px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden;">
-			                <h2 style="color: #fff; font-family: 'Open Sans', sans-serif; text-align: center; margin-bottom: 25px;">
+			<!-- Sección del Clasificador de Audio Optimizada -->
+			<div class="container mt-4">
+			    <div class="row justify-content-center">
+			        <!-- Reducimos el ancho de col-lg-10 a col-lg-6 para que sea más estrecho -->
+			        <div class="col-12 col-md-8 col-lg-6">
+			            <div style="background: #1a1a1a; padding: 15px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden;">
+			                <!-- Título más pequeño -->
+			                <h3 style="color: #fff; font-family: 'Open Sans', sans-serif; text-align: center; margin-bottom: 15px; font-size: 1.25rem;">
 			                    <i class="fas fa-brain"></i> IA: Music Mood Classifier
-			                </h2>
+			                </h3>
 			                
+			                <!-- Iframe con altura reducida (500px es suficiente para la nueva interfaz compacta) -->
 			                <iframe
 			                    src="https://huggingface.co/embed/agp96/VideoGameMusicMoodClassification/+"
 			                    frameborder="0"
 			                    width="100%"
-			                    height="750"
+			                    height="500"
 			                    style="border: none; border-radius: 8px; background: transparent;"
 			                ></iframe>
 			                
-			                <p style="color: #777; font-size: 0.85em; text-align: center; margin-top: 20px; font-style: italic;">
-			                    Nota: Este sistema utiliza inferencia en tiempo real mediante una arquitectura de red profunda VGGish alojada en Hugging Face.
+			                <!-- Nota al pie más sutil -->
+			                <p style="color: #666; font-size: 0.75em; text-align: center; margin-top: 10px; font-style: italic; line-height: 1.2;">
+			                    Inferencia en tiempo real (VGGish) via Hugging Face.
 			                </p>
 			            </div>
 			        </div>
