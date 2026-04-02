@@ -315,7 +315,22 @@ section[id] {
 	margin-bottom: 25px;
 }
 
+/* Etiquetas de tecnologías en el portfolio */
+.tech-tags {
+	display: flex;
+	gap: 8px;
+	flex-wrap: wrap;
+	margin-top: 12px;
+}
 
+.tech-tags .tag {
+	background-color: #0d6efd;
+	color: #fff;
+	padding: 4px 12px;
+	border-radius: 20px;
+	font-size: 0.85rem;
+	font-weight: 500;
+}
 
 /***** Footer *****/
 
