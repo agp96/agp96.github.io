@@ -6,6 +6,7 @@
 	<meta name="description"
 		content="Explora el portfolio de Adrián Gordo Prieto: desarrollador de videojuegos, web y apps móviles.">
 
+	<link rel="canonical" href="https://agp96.github.io/">
 	<meta property="og:type" content="website">
 	<meta property="og:url" content="https://agp96.github.io">
 	<meta property="og:title" content="Adrián Gordo Prieto | Dev de Videojuegos, Web y Apps">
@@ -32,10 +33,12 @@
 	<link rel="stylesheet" type="text/css" href="css/media-queries.css">
 
 	<link rel="shortcut icon" href="img/favicon/favicon.png">
-
+	
 	<!-- Font Awesome -->
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,600">
-	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+		integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 </head>
 
@@ -88,7 +91,8 @@
 	<script type="text/javascript" src="js/resources.js"></script>
 	<script type="text/javascript" src="js/input.js"></script>
 	<script type="text/javascript" src="js/sprite.js"></script>
-	<script src="js/game.js"></script>
+	<script src="js/game.js" defer></script>
+
 
 	<!-- Nav -->
 	<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
@@ -140,10 +144,7 @@
 						<p>He desarrollado varios proyectos en C y Java, en el ámbito web con HTML, Javascript y CSS3, y
 							en videojuegos con C++. </p>
 						<p>No me quedé ahí, en el Trabajo Fin de Grado me interesé por la Inteligencia Artificial, y
-							mediante Python realicé una <a
-								title="Herramienta para el estudio de las emociones en los videojuegos en Github"
-								href="https://github.com/agp96/Music-Classification-Audioset" target="_blank"
-								rel="noopener noreferrer">herramienta</a> para el estudio de las emociones en los
+							mediante Python realicé una <a href="#ia-classifier" class="scroll-link">herramienta</a> para el estudio de las emociones en los
 							videojuegos.
 						</p>
 					</div>
@@ -170,33 +171,6 @@
 								rel="noopener noreferrer">National
 								CyberLeague</a> y llegando a la final con mis compañeros de equipo.
 						</p>
-					</div>
-				</div>
-				<!-- Sección del Clasificador de Audio Optimizada -->
-				<div class="container mt-4">
-					<div class="row justify-content-center">
-						<!-- Reducimos el ancho de col-lg-10 a col-lg-6 para que sea más estrecho -->
-						<div class="col-12 col-md-8 col-lg-6">
-							<div
-								style="background: #1a1a1a; padding: 15px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden;">
-								<!-- Título más pequeño -->
-								<h3
-									style="color: #fff; font-family: 'Open Sans', sans-serif; text-align: center; margin-bottom: 15px; font-size: 1.25rem;">
-									<i class="fas fa-brain"></i> IA: Music Mood Classifier
-								</h3>
-
-								<!-- Iframe con altura reducida (500px es suficiente para la nueva interfaz compacta) -->
-								<iframe src="https://huggingface.co/embed/agp96/VideoGameMusicMoodClassification/+"
-									frameborder="0" width="100%" height="500"
-									style="border: none; border-radius: 8px; background: transparent;"></iframe>
-
-								<!-- Nota al pie más sutil -->
-								<p
-									style="color: #666; font-size: 0.75em; text-align: center; margin-top: 10px; font-style: italic; line-height: 1.2;">
-									Inferencia en tiempo real (VGGish) via Hugging Face.
-								</p>
-							</div>
-						</div>
 					</div>
 				</div>
 		</section>
@@ -335,6 +309,29 @@
 					</script>
 
 				</div>
+
+				<!-- Sección del Clasificador de Audio -->
+		<section id="ia-classifier">
+			<div class="container mt-4">
+				<div class="row justify-content-center">
+					<div class="col-12 col-md-8 col-lg-6">
+						<div
+							style="background: #1a1a1a; padding: 15px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); overflow: hidden;">
+							<h3
+								style="color: #fff; font-family: 'Open Sans', sans-serif; text-align: center; margin-bottom: 15px; font-size: 1.25rem;">
+								<i class="fas fa-brain"></i> Video Game Music Mood Classification
+							</h3>
+							<iframe src="https://huggingface.co/embed/agp96/VideoGameMusicMoodClassification/+"
+								frameborder="0" width="100%" height="500"
+								style="border: none; border-radius: 8px; background: transparent;"></iframe>
+							<p
+								style="color: #666; font-size: 0.75em; text-align: center; margin-top: 10px; font-style: italic; line-height: 1.2;">
+								Prueba en tiempo real (VGGish) via Hugging Face.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 	</main>
 
