@@ -86,7 +86,6 @@ var explosions = [];
 
 var lastFire = Date.now();
 var gameTime = 0;
-var isGameOver;
 
 var score = 0;
 var scoreEl = document.getElementById('score');
