@@ -22,6 +22,32 @@ var gameOverId = document.getElementById("game-over-overlay");
 gameOverId.width = canvas.width;
 gameOverId.height = canvas.height;
 
+// Cargar sprite sheet + todas las imágenes de tecnologías
+var techImagePaths = [
+    'img/game/tech/c.png',
+    'img/game/tech/c_.png',
+    'img/game/tech/c__.png',
+    'img/game/tech/java.png',
+    'img/game/tech/python.png',
+    'img/game/tech/swift.png',
+    'img/game/tech/html5.png',
+    'img/game/tech/css3.png',
+    'img/game/tech/javascript.png',
+    'img/game/tech/bootstrap.png',
+    'img/game/tech/angular.png',
+    'img/game/tech/androidstudio.png',
+    'img/game/tech/mysql.png',
+    'img/game/tech/unity.png',
+    'img/game/tech/opengl.png',
+    'img/game/tech/blender.png',
+    'img/game/tech/autodesk3dsmax.png',
+    'img/game/tech/cocos2d.png',
+    'img/game/tech/cpctelera.png',
+    'img/game/tech/ensamblador.png'
+];
+
+resources.load(['img/game/sprites.png'].concat(techImagePaths));
+
 // The main game loop
 var lastTime;
 function main() {
@@ -81,43 +107,17 @@ function update(dt) {
 
     // It gets harder over time by adding enemies using this
     // equation: 1-.993^gameTime
-    if (Math.random() < 1 - Math.pow(.993, gameTime)) {
-        var rand = Math.floor(Math.random() * 5);
-        if (rand == 0) {
-            enemies.push({
-                pos: [canvas.width,
-                Math.random() * (canvas.height - 39)],
-                sprite: new Sprite('img/game/sprites.png', [0, 78], [36, 32])
-            });
-        }
-        else if (rand == 1) {
-            enemies.push({
-                pos: [canvas.width,
-                Math.random() * (canvas.height - 39)],
-                sprite: new Sprite('img/game/sprites.png', [40, 78], [27, 36])
-            });
-        }
-        else if (rand == 2) {
-            enemies.push({
-                pos: [canvas.width,
-                Math.random() * (canvas.height - 39)],
-                sprite: new Sprite('img/game/sprites.png', [68, 78], [36, 32])
-            });
-        }
-        else if (rand == 3) {
-            enemies.push({
-                pos: [canvas.width,
-                Math.random() * (canvas.height - 39)],
-                sprite: new Sprite('img/game/sprites.png', [105, 78], [45, 36])
-            });
-        }
-        else if (rand == 4) {
-            enemies.push({
-                pos: [canvas.width,
-                Math.random() * (canvas.height - 39)],
-                sprite: new Sprite('img/game/sprites.png', [151, 78], [27, 36])
-            });
-        }
+     if (Math.random() < 1 - Math.pow(.993, gameTime)) {
+        // Elegir una tecnología aleatoria como enemigo
+        var techIndex = Math.floor(Math.random() * resources.techImages.length);
+        var techPath = resources.techImages[techIndex];
+        var techSize = resources.techSizes[techPath];
+        
+        enemies.push({
+            pos: [canvas.width,
+            Math.random() * (canvas.height - techSize[1])],
+            sprite: new Sprite(techPath, [0, 0], techSize)
+        });
     }
 
     checkCollisions();
@@ -310,13 +310,13 @@ function gameOver() {
     const urlJuego = "https://agp96.github.io/";
 
     // Twitter (X)
-    document.getElementById('scoreX').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(mensaje)}&url=${encodeURIComponent(urlJuego)}`;
+    document.getElementById('shareX').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(mensaje)}&url=${encodeURIComponent(urlJuego)}`;
 
     // WhatsApp
-    document.getElementById('scoreW').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensaje + " " + urlJuego)}`;
+    document.getElementById('shareW').href = `https://api.whatsapp.com/send?text=${encodeURIComponent(mensaje + " " + urlJuego)}`;
 
     // Telegram
-    document.getElementById('scoreT').href = `https://t.me/share/url?url=${encodeURIComponent(urlJuego)}&text=${encodeURIComponent(mensaje)}`;
+    document.getElementById('shareT').href = `https://t.me/share/url?url=${encodeURIComponent(urlJuego)}&text=${encodeURIComponent(mensaje)}`;
 
     isGameOver = true;
 }
