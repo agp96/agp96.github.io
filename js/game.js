@@ -18,9 +18,6 @@ var ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth - 20;
 canvas.height = window.innerHeight / 2;
 
-var gameOverId = document.getElementById("game-over-overlay");
-gameOverId.width = canvas.width;
-gameOverId.height = canvas.height;
 var isGameOver = false
 
 // Cargar sprite sheet + todas las imágenes de tecnologías
