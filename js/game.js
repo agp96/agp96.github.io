@@ -21,6 +21,7 @@ canvas.height = window.innerHeight / 2;
 var gameOverId = document.getElementById("game-over-overlay");
 gameOverId.width = canvas.width;
 gameOverId.height = canvas.height;
+var isGameOver = false
 
 // Cargar sprite sheet + todas las imágenes de tecnologías
 var techImagePaths = [
@@ -71,9 +72,6 @@ function init() {
     main();
 }
 
-resources.load([
-    'img/game/sprites.png'
-]);
 resources.onReady(init);
 
 // Game state
