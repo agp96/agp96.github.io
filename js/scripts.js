@@ -22,10 +22,8 @@
 				});
 			}, 2000); // 2 segundos de cortesía tras cargar la web
 		});
-	});
 
-	// Autoplay y control de vídeos en el carrusel 
-	document.addEventListener("DOMContentLoaded", function () {
+		// Autoplay y control de vídeos en el carrusel 
 		const carousel = document.getElementById('portfolioCarousel');
 		const videos = carousel.querySelectorAll('video');
 
@@ -51,7 +49,7 @@
 				}
 			});
 		}, { threshold: 0.5 }); // Mínimo de visibilidad del 50%
-
+		
 		observer.observe(carousel);
 	});
 
