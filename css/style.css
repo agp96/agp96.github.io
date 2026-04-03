@@ -176,9 +176,6 @@ section[id] {
 	/* para que solo ocupe el ancho de la imagen */
 }
 
-
-
-
 /***** Bio *****/
 
 #bio {
@@ -354,6 +351,15 @@ section[id] {
 
 #portfolio h2 {
 	margin-bottom: 25px;
+}
+
+/* IA Classifier */
+#ia-classifier {
+	background: #1a1a1a; 
+	padding: 15px; 
+	border-radius: 12px; 
+	box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+	overflow: hidden;
 }
 
 /* Etiquetas de tecnologías en el portfolio */
