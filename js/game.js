@@ -20,6 +20,30 @@ canvas.height = window.innerHeight / 2;
 
 var isGameOver = false
 
+    // Lista de imágenes de tecnologías para enemigos
+    var techImagePaths = [
+        'img/game/tech/c.png',
+        'img/game/tech/c_.png',
+        'img/game/tech/c__.png',
+        'img/game/tech/java.png',
+        'img/game/tech/python.png',
+        'img/game/tech/swift.png',
+        'img/game/tech/html5.png',
+        'img/game/tech/css3.png',
+        'img/game/tech/javascript.png',
+        'img/game/tech/bootstrap.png',
+        'img/game/tech/angular.png',
+        'img/game/tech/androidstudio.png',
+        'img/game/tech/mysql.png',
+        'img/game/tech/unity.png',
+        'img/game/tech/opengl.png',
+        'img/game/tech/blender.png',
+        'img/game/tech/autodesk3dsmax.png',
+        'img/game/tech/cocos2d.png',
+        'img/game/tech/cpctelera.png',
+        'img/game/tech/ensamblador.png'
+    ];
+
 resources.load(['img/game/sprites.png'].concat(techImagePaths));
 
 // The main game loop
