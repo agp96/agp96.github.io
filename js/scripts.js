@@ -1,27 +1,57 @@
 
-document.addEventListener('DOMContentLoaded', function () {
-	// Navbar scroll effect
-	const navbar = document.querySelector(".navbar");
+	document.addEventListener('DOMContentLoaded', function () {
+		// Navbar scroll effect
+		const navbar = document.querySelector(".navbar");
+	
+		window.addEventListener('scroll', function () {
+			if (window.scrollY > navbar.offsetHeight) {
+				navbar.classList.add('scrolled');
+			} else {
+				navbar.classList.remove('scrolled');
+			}
+		});
 
-	window.addEventListener('scroll', function () {
-		if (window.scrollY > navbar.offsetHeight) {
-			navbar.classList.add('scrolled');
-		} else {
-			navbar.classList.remove('scrolled');
-		}
+		// Carga diferida de vídeos del carrusel para optimizar el rendimiento inicial
+		window.addEventListener('load', function () {
+			setTimeout(function () {
+				const carouselVideos = document.querySelectorAll('#portfolioCarousel video');
+				carouselVideos.forEach(video => {
+					if (video.getAttribute('preload') === 'none') {
+						video.setAttribute('preload', 'metadata');
+					}
+				});
+			}, 2000); // 2 segundos de cortesía tras cargar la web
+		});
 	});
 
-	// Carga diferida de vídeos del carrusel para optimizar el rendimiento inicial
-	window.addEventListener('load', function () {
-		setTimeout(function () {
-			const carouselVideos = document.querySelectorAll('#portfolioCarousel video');
-			carouselVideos.forEach(video => {
-				if (video.getAttribute('preload') === 'none') {
-					video.setAttribute('preload', 'metadata');
+	// Autoplay y control de vídeos en el carrusel 
+	document.addEventListener("DOMContentLoaded", function () {
+		const carousel = document.getElementById('portfolioCarousel');
+		const videos = carousel.querySelectorAll('video');
+
+		// 1. Pausar todos los vídeos al empezar a cambiar la tarjeta
+		carousel.addEventListener('slide.bs.carousel', function () {
+			videos.forEach(v => v.pause());
+		});
+
+		// 2. Reproducir el vídeo de la tarjeta actual al terminar la animación
+		carousel.addEventListener('slid.bs.carousel', function (e) {
+			const activeVideo = e.relatedTarget.querySelector('video');
+			if (activeVideo) activeVideo.play().catch(() => { });
+		});
+
+		// 3. Reproducir automáticamente al hacer scroll hasta esta zona
+		const observer = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					const activeVideo = carousel.querySelector('.carousel-item.active video');
+					if (activeVideo) activeVideo.play().catch(() => { });
+				} else {
+					videos.forEach(v => v.pause());
 				}
 			});
-		}, 2000); // 2 segundos de cortesía tras cargar la web
-	});
-});
+		}, { threshold: 0.5 }); // Mínimo de visibilidad del 50%
 
+		observer.observe(carousel);
+	});
 
