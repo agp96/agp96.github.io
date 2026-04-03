@@ -18,6 +18,19 @@ var ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth - 20;
 canvas.height = window.innerHeight / 2;
 
+let resizeTimeout;
+window.addEventListener('resize', function () {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(function () {
+        canvas.width = window.innerWidth - 20;
+        canvas.height = window.innerHeight / 2;
+
+        if (player.pos[1] > canvas.height - player.sprite.size[1]) {
+            player.pos[1] = canvas.height - player.sprite.size[1];
+        }
+    }, 100);
+});
+
 var isGameOver = false
 
 resources.load(['img/game/sprites.png'].concat(techImagePaths));
