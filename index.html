@@ -93,7 +93,6 @@
 	<script type="text/javascript" src="js/sprite.js"></script>
 	<script src="js/game.js" defer></script>
 
-
 	<!-- Nav -->
 	<nav class="navbar fixed-top navbar-expand-md navbar-dark bg-dark">
 		<div class="container-fluid">
@@ -175,6 +174,7 @@
 				</div>
 		</section>
 
+		<!-- Portfolio -->
 		<section id="portfolio">
 			<div class="container">
 				<div class="row">
@@ -183,6 +183,7 @@
 					</div>
 				</div>
 
+				<!-- Carousel -->
 				<div id="portfolioCarousel" class="carousel slide" data-bs-ride="false">
 
 					<!-- Indicadores -->
@@ -291,43 +292,9 @@
 						</button>
 
 					</div>
-
-					<!-- Autoplay y control de vídeos en el carrusel -->
-					<script>
-						document.addEventListener("DOMContentLoaded", function () {
-							const carousel = document.getElementById('portfolioCarousel');
-							const videos = carousel.querySelectorAll('video');
-
-							// 1. Pausar todos los vídeos al empezar a cambiar la tarjeta
-							carousel.addEventListener('slide.bs.carousel', function () {
-								videos.forEach(v => v.pause());
-							});
-
-							// 2. Reproducir el vídeo de la tarjeta actual al terminar la animación
-							carousel.addEventListener('slid.bs.carousel', function (e) {
-								const activeVideo = e.relatedTarget.querySelector('video');
-								if (activeVideo) activeVideo.play().catch(() => { });
-							});
-
-							// 3. Reproducir automáticamente al hacer scroll hasta esta zona
-							const observer = new IntersectionObserver((entries) => {
-								entries.forEach(entry => {
-									if (entry.isIntersecting) {
-										const activeVideo = carousel.querySelector('.carousel-item.active video');
-										if (activeVideo) activeVideo.play().catch(() => { });
-									} else {
-										videos.forEach(v => v.pause());
-									}
-								});
-							}, { threshold: 0.5 }); // Mínimo de visibilidad del 50%
-
-							observer.observe(carousel);
-						});
-					</script>
-
 				</div>
 
-				<!-- Sección del Clasificador de Audio -->
+		<!-- Sección del Clasificador de Audio -->
 		<section id="ia-classifier">
 			<div class="container mt-4">
 				<div class="row justify-content-center">
