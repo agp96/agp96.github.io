@@ -58,8 +58,9 @@ let resizeTimeout;
 window.addEventListener('resize', function () {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(function () {
+        var navbarHeight = document.querySelector('.navbar').offsetHeight;
         canvas.width = window.innerWidth - 20;
-        canvas.height = window.innerHeight / 2;
+        canvas.height = window.innerHeight / 2 - navbarHeight;
 
         if (player.pos[1] > canvas.height - player.sprite.size[1]) {
             player.pos[1] = canvas.height - player.sprite.size[1];
