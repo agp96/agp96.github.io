@@ -69,7 +69,11 @@
 	#game-over-overlay {
     display: none !important;
 	}
-
+	
+    #game-container {
+        margin-top: 56px;
+    }
+	
     #touch-controls {
         display: flex;
     }
