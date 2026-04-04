@@ -16,7 +16,8 @@ var requestAnimFrame = (function () {
 var canvas = document.getElementById("canvas");
 var ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth - 20;
-canvas.height = window.innerHeight / 2;
+var navbarHeight = document.querySelector('.navbar').offsetHeight;
+canvas.height = window.innerHeight / 2 - navbarHeight;
 
 var isGameOver = false
 
