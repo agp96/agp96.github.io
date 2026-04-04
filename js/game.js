@@ -300,7 +300,8 @@ function gameOver() {
 
     // Telegram
     document.getElementById('shareT').href = `https://t.me/share/url?url=${encodeURIComponent(urlJuego)}&text=${encodeURIComponent(mensaje)}`;
-
+    document.getElementById('touch-controls').style.display = 'none';
+    
     isGameOver = true;
 }
 
@@ -308,6 +309,9 @@ function gameOver() {
 function reset() {
     document.getElementById('game-over').style.display = 'none';
     document.getElementById('game-over-overlay').style.display = 'none';
+    if (window.innerWidth < 768) {
+    document.getElementById('touch-controls').style.display = 'flex';
+    }
     isGameOver = false;
     gameTime = 0;
     score = 0;
