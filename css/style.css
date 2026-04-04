@@ -106,7 +106,7 @@ section[id] {
 #play-again {
 	vertical-align: middle;
 	display: inline-block;
-	background-color: #98751c;
+    background-color: #0d6efd;
 	border: none;
 	color: #fff;
 	padding: 10px 20px;
@@ -115,7 +115,7 @@ section[id] {
 }
 
 #play-again:hover {
-	background-color: #c09323;
+    background-color: #3385ff;
 }
 
 /***** Navbar *****/
