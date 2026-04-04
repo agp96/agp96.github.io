@@ -106,16 +106,17 @@ section[id] {
 #play-again {
 	vertical-align: middle;
 	display: inline-block;
-    background-color: #0d6efd;
-	border: none;
-	color: #fff;
+    background-color: #e0e0e0;
+    color: #111111;
+    border: none;
 	padding: 10px 20px;
 	border-radius: 8px;
 	cursor: pointer;
 }
 
 #play-again:hover {
-    background-color: #3385ff;
+    background-color: #ffffff;
+    color: #111111;
 }
 
 /***** Navbar *****/
