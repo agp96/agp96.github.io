@@ -108,11 +108,15 @@
 		font-size: 120%;
 	}
 
-	.bio-img {
-		margin-top: 20px;
-		margin-bottom: 0px;
+	#bio .container {
+    margin-bottom: 0px;
 	}
-
+	
+	.bio-img {
+	    margin-top: 10px;
+	    margin-bottom: 0px;
+	}
+	
 	#portfolioCarousel .carousel-control-prev,
 	#portfolioCarousel .carousel-control-next {
 	    top: 10px;
