@@ -65,9 +65,13 @@
 	#canvas,
 	#game-over,
 	#game-over-overlay {
-		display: none !important;
+        display: block !important;
 	}
 
+    #touch-controls {
+        display: flex;
+    }
+	
 	.bio-textRight {
 		margin-top: 10px;
 	}
