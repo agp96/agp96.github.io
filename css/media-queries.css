@@ -91,7 +91,34 @@
 		margin-bottom: 0px;
 	}
 
-
+	#portfolioCarousel .carousel-control-prev,
+	#portfolioCarousel .carousel-control-next {
+	    position: absolute;
+	    top: 10px;
+	    bottom: auto;
+	    width: 36px;
+	    height: 36px;
+	    background-color: rgba(255, 255, 255, 0.15);
+	    border-radius: 50%;
+	    opacity: 0.8;
+	    right: 50px;
+	    left: auto;
+	    justify-content: center;
+	    align-items: center;
+	    transition: all 0.3s ease;
+	    z-index: 10;
+	}
+	
+	#portfolioCarousel .carousel-control-next {
+	    right: 10px;
+	    left: auto;
+	}
+	
+	#portfolioCarousel .carousel-control-prev:hover,
+	#portfolioCarousel .carousel-control-next:hover {
+	    background-color: rgba(255, 255, 255, 0.3);
+	    opacity: 1;
+	}
 
 	.footer-social {
 		padding: 0 0 20px 0;
