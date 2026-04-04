@@ -11,20 +11,18 @@
 			}
 		});
 
-		const touchControls = document.getElementById('touch-controls');
-		const gameContainer = document.getElementById('game-container');
+		if (window.innerWidth < 768) {
+		    const touchControls = document.getElementById('touch-controls');
+		    const gameContainer = document.getElementById('game-container');
 		
-		const gameObserver = new IntersectionObserver((entries) => {
-		    entries.forEach(entry => {
-		        if (entry.isIntersecting) {
-		            touchControls.style.display = 'flex';
-		        } else {
-		            touchControls.style.display = 'none';
-		        }
-		    });
-		}, { threshold: 0.1 });
+		    const gameObserver = new IntersectionObserver((entries) => {
+		        entries.forEach(entry => {
+		            touchControls.style.display = entry.isIntersecting ? 'flex' : 'none';
+		        });
+		    }, { threshold: 0.1 });
 		
-		gameObserver.observe(gameContainer);
+		    gameObserver.observe(gameContainer);
+		}
 		
 		// Carga diferida de vídeos del carrusel para optimizar el rendimiento inicial
 		window.addEventListener('load', function () {
