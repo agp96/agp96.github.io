@@ -119,6 +119,50 @@ section[id] {
     color: #111111;
 }
 
+#touch-controls {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    padding: 0 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 10;
+    pointer-events: none;
+}
+
+#touch-movement {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    pointer-events: all;
+}
+
+#touch-controls button {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    border: 2px solid rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.15);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    pointer-events: all;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#touch-controls button:active {
+    background-color: rgba(255,255,255,0.35);
+}
+
+#btn-shoot {
+    width: 80px !important;
+    height: 80px !important;
+    font-size: 32px !important;
+    border-color: rgba(255,255,255,0.4) !important;
+}
 /***** Navbar *****/
 
 .navbar-nav {
