@@ -62,10 +62,12 @@
 		display: none;
 	}
 
-	#canvas,
-	#game-over,
-	#game-over-overlay {
+	#canvas{
         display: block !important;
+	}
+	
+	#game-over-overlay {
+    display: none !important;
 	}
 
     #touch-controls {
