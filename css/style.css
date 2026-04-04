@@ -12,6 +12,65 @@ section[id] {
 	scroll-margin-top: 70px;
 }
 
+/***** Navbar *****/
+
+.navbar-nav {
+	margin-left: 60px;
+}
+
+.navbar.scrolled {
+	background-color: #000 !important;
+	transition: background-color 200ms linear;
+}
+
+.navbar-dark .navbar-nav {
+	font-size: 15px;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+	color: #fff;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus {
+	color: #fff;
+	outline: 0;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+.navbar-text {
+	margin-right: 120px;
+}
+
+.navbar-dark .navbar-text a {
+	margin: 0 8px;
+	font-size: 26px;
+	color: #fff;
+	color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-dark .navbar-text a:hover,
+.navbar-dark .navbar-text a:focus {
+	color: #fff;
+}
+
+/***** Home *****/
+
+#home {
+	position: relative;
+	/* para poder posicionar el texto de forma absoluta */
+	display: inline-block;
+	/* para que solo ocupe el ancho de la imagen */
+}
+
 /***** Game *****/
 
 #canvas {
@@ -163,64 +222,6 @@ section[id] {
     font-size: 32px !important;
     border-color: rgba(255,255,255,0.4) !important;
 }
-/***** Navbar *****/
-
-.navbar-nav {
-	margin-left: 60px;
-}
-
-.navbar.scrolled {
-	background-color: #000 !important;
-	transition: background-color 200ms linear;
-}
-
-.navbar-dark .navbar-nav {
-	font-size: 15px;
-}
-
-.navbar-dark .navbar-nav .nav-link {
-	color: #fff;
-	color: rgba(255, 255, 255, 0.8);
-}
-
-.navbar-dark .navbar-nav .nav-link:hover {
-	color: #fff;
-}
-
-.navbar-dark .navbar-nav .nav-link:focus {
-	color: #fff;
-	outline: 0;
-}
-
-.navbar-expand-md .navbar-nav .nav-link {
-	padding-left: 1rem;
-	padding-right: 1rem;
-}
-
-.navbar-text {
-	margin-right: 120px;
-}
-
-.navbar-dark .navbar-text a {
-	margin: 0 8px;
-	font-size: 26px;
-	color: #fff;
-	color: rgba(255, 255, 255, 0.8);
-}
-
-.navbar-dark .navbar-text a:hover,
-.navbar-dark .navbar-text a:focus {
-	color: #fff;
-}
-
-/***** Home *****/
-
-#home {
-	position: relative;
-	/* para poder posicionar el texto de forma absoluta */
-	display: inline-block;
-	/* para que solo ocupe el ancho de la imagen */
-}
 
 /***** Bio *****/
 
@@ -308,29 +309,31 @@ section[id] {
 
 #portfolioCarousel .carousel-control-prev,
 #portfolioCarousel .carousel-control-next {
-	position: absolute;
-	bottom: 40px;
-	top: auto;
-	width: 44px;
-	height: 44px;
-	background-color: rgba(255, 255, 255, 0.15);
-	border-radius: 50%;
-	opacity: 0.8;
-	left: 50px;
-	justify-content: center;
-	align-items: center;
-	transition: all 0.3s ease;
-	z-index: 10;
+    position: absolute;
+    top: 10px;
+    bottom: auto;
+    width: 36px;
+    height: 36px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    opacity: 0.8;
+    right: 50px;
+    left: auto;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    z-index: 10;
 }
 
 #portfolioCarousel .carousel-control-next {
-	left: 104px;
+    right: 10px;
+    left: auto;
 }
 
 #portfolioCarousel .carousel-control-prev:hover,
 #portfolioCarousel .carousel-control-next:hover {
-	background-color: rgba(255, 255, 255, 0.3);
-	opacity: 1;
+    background-color: rgba(255, 255, 255, 0.3);
+    opacity: 1;
 }
 
 .portfolio-slide {
