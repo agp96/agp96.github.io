@@ -61,6 +61,28 @@
 	#canvas{
         display: block !important;
 	}
+
+	#game-over {
+    width: 70%;
+    max-width: 280px;
+    padding: 20px 15px;
+	}
+	
+	#game-over h1 {
+	    font-size: 2em;
+	}
+	
+	#game-over button {
+	    font-size: 1.1em;
+	}
+	
+	#game-over a {
+	    width: 65px;
+	    height: 34px;
+	    font-size: 12px;
+	    line-height: 34px;
+	    margin: 3px;
+	}
 	
 	#game-over-overlay {
     display: none !important;
