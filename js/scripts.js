@@ -11,6 +11,21 @@
 			}
 		});
 
+		const touchControls = document.getElementById('touch-controls');
+		const gameContainer = document.getElementById('game-container');
+		
+		const gameObserver = new IntersectionObserver((entries) => {
+		    entries.forEach(entry => {
+		        if (entry.isIntersecting) {
+		            touchControls.style.display = 'flex';
+		        } else {
+		            touchControls.style.display = 'none';
+		        }
+		    });
+		}, { threshold: 0.1 });
+		
+		gameObserver.observe(gameContainer);
+		
 		// Carga diferida de vídeos del carrusel para optimizar el rendimiento inicial
 		window.addEventListener('load', function () {
 			setTimeout(function () {
