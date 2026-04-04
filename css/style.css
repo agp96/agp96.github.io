@@ -35,10 +35,6 @@ section[id] {
 	display: inline-block;
 }
 
-#game-container {
-    margin-top: 56px;
-}
-
 #game-over {
 	height: auto;
 	max-height: 90vh;
