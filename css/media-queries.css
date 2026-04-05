@@ -61,6 +61,7 @@
 	#game-over {
     width: 50%;
     max-width: 280px;
+    max-height: 60vh;
     padding: 20px 15px;
 	}
 	
