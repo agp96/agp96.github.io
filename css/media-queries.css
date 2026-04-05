@@ -95,6 +95,14 @@
     #touch-controls {
         display: flex;
     }
+
+	#bio p {
+    margin-bottom: 5px;
+	}
+	
+	#bio {
+	    padding-top: 20px;
+	}
 	
 	.bio-textRight {
 		margin-top: 2px;
