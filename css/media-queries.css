@@ -95,16 +95,6 @@
     #touch-controls {
         display: flex;
     }
-
-	.foto {
-    max-width: 60%;
-    display: block;
-    margin: 0 auto;
-	}
-	
-	#bio .row {
-	    row-gap: 0;
-	}
 	
 	#bio p {
     margin-bottom: 5px;
@@ -112,6 +102,23 @@
 	
 	#bio {
 	    padding-top: 20px;
+	}
+	
+	#bio .row {
+	    row-gap: 0;
+	}
+	
+	#bio .col-12 {
+    padding-top: 0;
+    padding-bottom: 0;
+	}
+	
+	.foto {
+	max-width: 50%;
+    max-height: 200px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
 	}
 	
 	.bio-textRight {
