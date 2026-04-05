@@ -62,15 +62,6 @@ section[id] {
 	color: #fff;
 }
 
-/***** Home *****/
-
-#home {
-	position: relative;
-	/* para poder posicionar el texto de forma absoluta */
-	display: inline-block;
-	/* para que solo ocupe el ancho de la imagen */
-}
-
 /***** Game *****/
 
 #canvas {
@@ -230,11 +221,6 @@ section[id] {
 	text-align: center;
 }
 
-.bio-img {
-	margin-top: 0px;
-	margin-bottom: 0px;
-}
-
 .foto {
 	max-width: 80%;
 	max-height: 80%;
@@ -338,30 +324,6 @@ section[id] {
 
 .portfolio-slide {
 	padding: 10px 40px;
-}
-
-.portfolio-info {
-	padding: 20px 30px;
-	text-align: left;
-}
-
-.portfolio-info h5 {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	font-size: 1.3rem;
-	margin-bottom: 16px;
-}
-
-.portfolio-info h5 img {
-	height: 32px;
-	width: auto;
-}
-
-.portfolio-info p {
-	color: rgba(255, 255, 255, 0.8);
-	font-size: 1rem;
-	line-height: 1.6;
 }
 
 #portfolioCarousel video {
