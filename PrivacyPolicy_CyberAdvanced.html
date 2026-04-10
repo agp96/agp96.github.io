@@ -58,4 +58,93 @@
             align-items: center;
         }
 
-        h2::before
+        h2::before {
+            content: "•";
+            color: var(--primary);
+            font-weight: bold;
+            display: inline-block; 
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        p, li {
+            font-size: 1.05rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 25px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .highlight-box strong {
+            color: var(--secondary);
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--light-text);
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 25px; }
+            h1 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">App: <strong>CyberAdvanced</strong> | Last Updated: April 10, 2026</p>
+    </header>
+
+    <p>Adrián Gordo Prieto ("we," "us," or "our") operates the CyberAdvanced mobile application (the "Service"). This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service.</p>
+
+    <h2>1. Information Collection and Use</h2>
+    <p>We do not collect or share any personal identifiable information. However, to provide the core functionality of the game, the application requires access to certain permissions necessary for the gameplay experience.</p>
+
+    <h2>2. Microphone Access (RECORD_AUDIO)</h2>
+    <p>The Service uses the microphone permission (<code>android.permission.RECORD_AUDIO</code>) for the following purposes:</p>
+    <ul>
+        <li><strong>Voice Recognition:</strong> To allow the user to interact with the game via speech-to-text features or voice commands.</li>
+        <li><strong>Real-time Processing:</strong> Audio data is processed in real-time on the device solely for gameplay purposes.</li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong>Important Data Security Note:</strong>
+        We DO NOT record, store, or transmit any audio data to our servers or any third parties. All audio processing is performed locally and ephemerally on your device.
+    </div>
+
+    <h2>3. Permissions</h2>
+    <p>In addition to audio, the app may require standard permissions necessary for the Cocos2d-x engine and Android system stability. These are used only to ensure the Service functions correctly.</p>
+
+    <h2>4. Data Safety</h2>
+    <p>We do not sell, trade, or otherwise transfer your information to outside parties. Since we do not collect data on a server, there is no database of user information to be compromised.</p>
+
+    <h2>5. Children’s Privacy</h2>
+    <p>Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from children under 13.</p>
+
+    <h2>6. Changes to This Privacy Policy</h2>
+    <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes.</p>
+
+    <h2>7. Contact Us</h2>
+    <p>If you have any questions about this Privacy Policy, please contact us at: <strong>agpalmoradi@gmail.com</strong></p>
+
+    <div class="footer">
+        &copy; 2026 Adrián Gordo Prieto. All rights reserved.
+    </div>
+</div>
+
+</body>
+</html>
